@@ -114,6 +114,9 @@ body div:nth-child(1) img {
   }
 
   body div:nth-child(1) header {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0;
     position: relative;
   }
 
