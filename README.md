@@ -40,13 +40,13 @@ https://www.orsm.jp/#top
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 Landing section
-<img src="images/screenshot_1.png" width="375px" alt="Op de landing section is een achtergrond, menu en een afbeelding te zien. Ook is er een button te zien die aangeeft dat je naar beneden moet scrollen.">
+<img src="images/screenshots/screenshot_1.png" width="375px" alt="Op de landing section is een achtergrond, menu en een afbeelding te zien. Ook is er een button te zien die aangeeft dat je naar beneden moet scrollen.">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 Begin animatie
-<img src="images/screenshot_2.png" width="375px" alt="De section begint met een animatie die het scherm uit beweegt. Hierna is het nieuws zichtbaar">
+<img src="images/screenshots/screenshot_2.png" width="375px" alt="De section begint met een animatie die het scherm uit beweegt. Hierna is het nieuws zichtbaar">
 News section
-<img src="images/screenshot_3.png" width="375px" alt="Na de animatie is er nieuws te zien met een paar categorieën. Ook bevinden zich er een aantal afbeeldingen omheen en een verticaal scroll menu.">
+<img src="images/screenshots/screenshot_3.png" width="375px" alt="Na de animatie is er nieuws te zien met een paar categorieën. Ook bevinden zich er een aantal afbeeldingen omheen en een verticaal scroll menu.">
  
 </details>
 
@@ -58,13 +58,14 @@ News section
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdown_schetsen/breakdown_hele_pagina.jpg" width="375px" alt="breakdown van de hele pagina">
 
-### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+### dynamisch deel 1 (scrollanimatie): 
+<img src="images/breakdown_schetsen/breakdown_dynamisch_deel1.jpg" width="375px" alt="breakdown van het begin van de scrollanimatie">
+<img src="images/breakdown_schetsen/breakdown_dynamisch_deel2.jpg" width="375px" alt="breakdown van de scrollanimatie halverwege">
 
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+### dynamisch deel 2 (hamburgermenu mobiel): 
+<img src="images/breakdown_schetsen/breakdown_dynamisch2_deel1.jpg" width="375px" alt="breakdown van het menu dat openklapt">
 
 </details>
 
