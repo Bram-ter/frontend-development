@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(/images/assets/btn_nav_on.png) !important;
 }
 
+.testClass {
+  background-color: pink !important;
+}
+
 body div {
   display: flex;
   flex-direction: column;
@@ -46,6 +50,42 @@ body div {
   background-size: cover;
   background-position-y: -8.5vh;
   background-repeat: no-repeat;
+}
+
+body main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+body main section {
+  height: 100vh;
+  transition: 3s;
+  scroll-snap-align: start;
+}
+
+body section:nth-child(1) {
+  background-color: red;
+}
+
+body section:nth-child(2) {
+  background-color: blue;
+}
+
+body section:nth-child(3) {
+  background-color: green;
+}
+
+body section:nth-child(4) {
+  background-color: yellow;
+}
+
+body section:nth-child(5) {
+  background-color: purple;
+}
+
+body section:nth-child(6) {
+  background-color: black;
 }
 
 body div header {
@@ -64,6 +104,7 @@ body div:nth-child(1) header button {
   background-size: contain;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 body div header nav {
@@ -85,6 +126,8 @@ body div:nth-child(1) header nav ul li {
 
 body div:nth-child(1) header nav ul li a {
   font-family: "Posterama";
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 body div:nth-child(1) header nav ul li a:hover {
@@ -104,6 +147,12 @@ body div:nth-child(1) header nav h1 img {
 body div:nth-child(1) img {
   width: 45em;
   align-self: center;
+}
+
+@media screen and (max-width: 1700px) { 
+  body div {
+    background-position-y: 0vh;
+  }
 }
 
 @media screen and (max-width: 500px) {
