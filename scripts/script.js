@@ -2,20 +2,20 @@
 
 /* -- Hamburgermenu -- */
 
-var hamburger = document.querySelector("body div header button");
-var navMenu = document.querySelector("body div header nav");
-
-hamburger.addEventListener("click", mobileMenu);
+var hamburger = document.querySelector("body section header button");
+var navMenu = document.querySelector("body section header nav");
 
 function mobileMenu() {
     hamburger.classList.toggle("cross");
     navMenu.classList.toggle("active");
 }
 
+hamburger.addEventListener("click", mobileMenu);
+
 /* -- Intersection observer -- */
 
 // Target element to be observed.
-const observerElement = document.querySelector('section:nth-child(2)');
+const observerElement = document.querySelector('body section:nth-child(2)');
 
 // Intersection Observer Configuration
 const observerOptions = {

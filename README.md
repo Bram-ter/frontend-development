@@ -79,31 +79,29 @@ News section
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb een start gemaakt aan mijn HTML. Ik was soms nog wel even aan het twijfelen of ik dingen soms semantischer neer kon zetten, maar verder ging het goed. Ik heb gekeken naar het maken van een hamburgermenu met javascript om mijn kennis weer even op te frissen, en ik heb gekeken naar de Intersection Observer.  
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Bram     | Xiao Nan         | Kevin    | Tijn        |
+| ---      | ---              | ---      | ---         |
+| Geen punten | aria-label | figure/figcaption | Geen punten |
+|          | feedback op haar html | achtergrondimg |    |
+|          |                  |          |             |
+| ...      | ...              | ...      | ...         |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Door het kijken naar Xiao Nan haar HTML zijn we allemaal iets meer te weten gekomen over semantische HTML.
+- Geleerd hoe we een aria-label moeten gebruiken.
+- .Visually-hidden class gebruiken als je een heading element in een element niet wil gebruiken maar er wel in stopt voor semantiek. https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/ 
+- Opgefrist wanneer je nou een button of a element gebruikt.
 
 </details>
-
-
-
 
 
 ## Voortgang 2 (week 3)
