@@ -2,8 +2,8 @@
 
 /* -- Hamburgermenu -- */
 
-var hamburger = document.querySelector("body section header button");
-var navMenu = document.querySelector("body section header nav");
+var hamburger = document.querySelector("body main section header button");
+var navMenu = document.querySelector("body main section header nav");
 
 function mobileMenu() {
     hamburger.classList.toggle("cross");
@@ -15,7 +15,7 @@ hamburger.addEventListener("click", mobileMenu);
 /* -- Intersection observer -- */
 
 // Target element to be observed.
-const observerElement = document.querySelector('body section:nth-child(2)');
+const observerElement = document.querySelector('#live');
 
 // Intersection Observer Configuration
 const observerOptions = {
