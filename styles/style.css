@@ -196,7 +196,7 @@ body section:nth-child(1) header {
 
   body section:nth-child(2) {
     background-image: 
-      url('./images/assets/news_illust_1.png'),
+      url('../images/assets/news_illust_1.png'),
       url('../images/assets/news_illust_2.png')
     ;
     background-repeat: no-repeat;
@@ -253,12 +253,10 @@ body section:nth-child(1) header {
   }
 
   body section:nth-child(2) div ul:last-of-type {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 3fr);
+    display: flex;
     overflow: scroll;
     height: 50%;
     grid-gap: .5em;
-    justify-content: center; 
   }
 
   body section:nth-child(2) div ul:last-of-type li {
