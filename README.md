@@ -110,7 +110,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-Ik ben verder gegaan aan mijn HTML en heb hierbij wat content toegevoegd aan mijn website. De sections staan en zijn nu scrollbaar met de intersection observer (hoewel deze het nu even niet goed doet.) Ik ben van plan alle content eerst de in de website te zetten en daarna aan de animaties te beginnen.
+Ik ben verder gegaan aan mijn HTML en heb hierbij wat content toegevoegd aan mijn website. De sections staan en zijn nu scrollbaar met de intersection observer (hoewel deze het nu even niet goed doet.) Ik ben van plan alle content eerst in de website te zetten en daarna aan de animaties te beginnen.
 
 
 ### Agenda voor meeting
