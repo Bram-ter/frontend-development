@@ -28,9 +28,9 @@
 						<li><a href="#">Goods</a></li>
 						<li><a href="#">Shop</a></li>
 						<li><a href="mailto:bram.tersteeg2@hva.nl">Contact</a></li>
-						<li><a><img src="./images/assets/nav_tw.png" alt="link to Twitter"/></a></li>
-						<li><a><img src="./images/assets/nav_yt.png" alt="link to YouTube"/></a></li>
-						<li><a><img src="./images/assets/nav_li.png" alt="link to Line"/></a></li>
+						<li><a tabindex="0"><img src="./images/assets/nav_tw.png" alt="link to Twitter"/></a></li>
+						<li><a tabindex="0"><img src="./images/assets/nav_yt.png" alt="link to YouTube"/></a></li>
+						<li><a tabindex="0"><img src="./images/assets/nav_li.png" alt="link to Line"/></a></li>
 					</ul>
 				</nav>
 			</header>
@@ -38,7 +38,6 @@
 		</section>
 
 	<section id="news">
-		<div>
 			<h2>NEWS</h2>
 			<h3 lang="ja">ニュース</h3>
 			<ul>
@@ -48,7 +47,9 @@
 				<li><a>Media</a></li>
 				<li><a>Information</a></li>
 			</ul>
-			<ul>
+		<div id="newsSlider" class="newsSlider" aria-label="Slider with news items" tabIndex="-1">
+			<div>
+				<ul id="element1">
 				<li>
 					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
 					<h3>Info</h3>
@@ -74,13 +75,115 @@
 					<h3>Info</h3>
 					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
 				</li>
-			</ul>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				</ul>
+				<ul id="element2">
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info2</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info2</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info2</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info2</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info2</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info2</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				</ul>
+				<ul id="element3">
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info3</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info3</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info3</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info3</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info3</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				<li>
+					<h4><time datetime="2021-10-09">-2021/10/09-</time></h4>
+					<h3>Info3</h3>
+					<p lang="ja">CONTINEW WORLD」リリースインタビュー掲載・出演情報</p>
+				</li>
+				</ul>
+			</div>
+				
+			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+				
+			<nav>
+				<ul>
+				<li><a href="#element1" aria-label="go to element1"></a></li>
+				<li><a href="#element2" aria-label="go to element2"></a></li>
+				<li><a href="#element3" aria-label="go to element3"></a></li>
+				</ul>
+			</nav>
 		</div>
 	</section>
 	<section id="live">
 		<div>
 		<h2>LIVE</h2>
 		<h3 lang="ja">ライブ</h3>
+		</div>
+		<div id="liveSlider" class="liveSlider" aria-label="Slider with live items" tabIndex="-1">
+			<div>
+				<ul id="element1">
+				</ul>
+				<ul id="element2">
+				</ul>
+				<ul id="element3">
+				</ul>
+			</div>
+				
+			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+				
+			<nav>
+				<ul>
+				<li><a href="#element1" aria-label="go to element1"></a></li>
+				<li><a href="#element2" aria-label="go to element2"></a></li>
+				<li><a href="#element3" aria-label="go to element3"></a></li>
+				</ul>
+			</nav>
 		</div>
 	</section>
 	<section id="discography">	
@@ -100,7 +203,7 @@
 		<h2>VIDEO</h2>
 		<h3 lang="ja">ヴィデオ</h3>
 		</div>
-		<a href="#landing">
+		<a href="#landing" tabindex="0">
 			<img src="./images/assets/btn_pagetop_1.png" alt="Return top to page"/>
 			<img src="./images/assets/btn_pagetop_2.png" alt="Picture of a dragon head"/>
 		</a>
