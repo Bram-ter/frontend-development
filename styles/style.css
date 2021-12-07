@@ -393,7 +393,7 @@ body main section:nth-child(3) > ul li:last-of-type::after {
   position: absolute;
   bottom: 50%;
   top: 50%;
-  left: 50%;
+  left: 1em;
   content: '│';
   transform: rotate(-90deg);
 }
