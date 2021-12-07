@@ -72,12 +72,14 @@ h1, h2, h3, h4, h5, h6 {
 
 body main {
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+}
+
+body main > img {
+  width: 100%;
 }
 
 body section {
-  height: 100vh;
+  height: 110vh;
   /*transition: 3s;*/
   scroll-snap-align: start;
   background-size: 8em, 8em;
@@ -114,7 +116,7 @@ body main section > h3::after {
 
 /* Landing Section */
 
-body section:nth-child(1) {
+body main section:nth-child(1) {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -124,19 +126,19 @@ body section:nth-child(1) {
   background-repeat: no-repeat;
 }
 
-body section:nth-child(1) > img {
+body main section:nth-child(1) > img {
   width: 100%;
   align-self: center;
 }
     
-body section:nth-child(1) header {
+body main section:nth-child(1) header {
   width: 100%;
   margin: 0 auto;
   margin-top: 0;
   position: relative;
 }
     
-body section:nth-child(1) header button {
+body main section:nth-child(1) header button {
   z-index: 1;
   display: block;
   position: absolute;
@@ -151,7 +153,7 @@ body section:nth-child(1) header button {
   cursor: pointer;
 }
     
-body section:nth-child(1) header nav {
+body main section:nth-child(1) header nav {
   display: none;
   width: 100%;
   height: 100vh;
@@ -162,46 +164,46 @@ body section:nth-child(1) header nav {
   background-color: var(--yellow-background);
 }
 
-body section:nth-child(1) header nav h1 {
+body main section:nth-child(1) header nav h1 {
   width: 100%;
   margin-top: .5em;
   text-align: center;
 }
 
-body section:nth-child(1) header nav ul {
+body main section:nth-child(1) header nav ul {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-body section:nth-child(1) header nav ul li {
+body main section:nth-child(1) header nav ul li {
   list-style-type: none;
   padding: .5em;
   width: 100%;
   text-align: center;
 }
     
-body section:nth-child(1) header nav h1 img {
+body main section:nth-child(1) header nav h1 img {
   width: 13em;
   height: 4em;
   text-align: center;
 }
 
-body section:nth-child(1) header nav ul li:nth-child(9),
-body section:nth-child(1) header nav ul li:nth-child(10),
-body section:nth-child(1) header nav ul li:nth-child(11) {
+body main section:nth-child(1) header nav ul li:nth-child(9),
+body main section:nth-child(1) header nav ul li:nth-child(10),
+body main section:nth-child(1) header nav ul li:nth-child(11) {
   padding: .3em;
   width: 5em;
 }
 
-body section:nth-child(1) header nav ul li:nth-child(9) a img,
-body section:nth-child(1) header nav ul li:nth-child(10) a img,
-body section:nth-child(1) header nav ul li:nth-child(11) a img {
+body main section:nth-child(1) header nav ul li:nth-child(9) a img,
+body main section:nth-child(1) header nav ul li:nth-child(10) a img,
+body main section:nth-child(1) header nav ul li:nth-child(11) a img {
   width: 2.5em;
 }
 
-body section:nth-child(1) header nav ul li a {
+body main section:nth-child(1) header nav ul li a {
   font-size: 1.5em;
   font-family: "Posterama";
   color: var(--text-color);
@@ -209,14 +211,14 @@ body section:nth-child(1) header nav ul li a {
   text-shadow: 0 0.1em var(--subheading-color);
 }
   
-body section:nth-child(1) header nav ul li a:hover {
+body main section:nth-child(1) header nav ul li a:hover {
   color: var(--hover-color);
   cursor: pointer;
 }
 
 /* News Section */
 
-body section:nth-child(2) {
+body main section:nth-child(3) {
   background-image: 
     url('../images/assets/news_illust_1.png'),
     url('../images/assets/news_illust_2.png')
@@ -228,7 +230,7 @@ body section:nth-child(2) {
   flex-direction: column;
 }
 
-body section:nth-child(2) > div::after {
+body main section:nth-child(3) > div::after {
   position: absolute;
   background-image: url("../images/assets/arrow_g_r.png");
   right: 0%;
@@ -236,7 +238,7 @@ body section:nth-child(2) > div::after {
   transform: translate(3em);
 }
 
-body section:nth-child(2) > div::before {
+body main section:nth-child(3) > div::before {
   position: absolute;
   background-image: url("../images/assets/arrow_g_l.png");
   left: 0%;
@@ -244,7 +246,7 @@ body section:nth-child(2) > div::before {
   transform: translate(-3em);
 }
 
-body section:nth-child(2) > ul {
+body main section:nth-child(3) ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -252,23 +254,23 @@ body section:nth-child(2) > ul {
   gap: 1em;
 }
 
-body section:nth-child(2) > ul li {
+body main section:nth-child(3) > ul li {
   font-family: "cdtype-locke";
   list-style-type: none;
 }
 
-body section:nth-child(2) > ul li a:hover { 
+body main section:nth-child(3) > ul li a:hover { 
   color: var(--slider-item-bg);
   cursor: pointer;
 }
 
-body section:nth-child(2) > ul li::after {
+body main section:nth-child(3) > ul li::after {
   content: '/';
   font-size: .8em;
   padding-left: .5em;
 }
 
-body section:nth-child(2) > ul li:last-of-type::after {
+body main section:nth-child(3) > ul li:last-of-type::after {
   content: '';
 }
 
@@ -312,8 +314,7 @@ body section:nth-child(2) > ul li:last-of-type::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1%;
-  row-gap: 0em;
+  gap: 1ch;
   flex-basis: 100%;
   flex-shrink: 0;
 	scroll-snap-align: center;
@@ -323,7 +324,7 @@ body section:nth-child(2) > ul li:last-of-type::after {
 
 .newsSlider > div ul li {
   display: grid;
-  height: 20vh;
+  height: auto;
   width: calc( 50% - 1em);
   background-color: var(--slider-item-bg);
   border-radius: .2em;
@@ -444,13 +445,13 @@ body section:nth-child(2) > ul li:last-of-type::after {
   right: 0em;
 }
 
-/* bij hover en focus schuiven de links in beeld */
+/* bij hover en focus schuiven de links in beeld
 .newsSlider:hover > a[href="previous"],
 .newsSlider:focus-within > a[href="previous"] {
 }
 .newsSlider:hover > a[href="next"],
 .newsSlider:focus-within > a[href="next"] {
-}
+}*/
 
 /* prev en next linkbuttons pijltjes */
 .newsSlider > a::before,
@@ -486,7 +487,7 @@ body section:nth-child(2) > ul li:last-of-type::after {
 
 /* Live Section */
 
-body section:nth-child(3) {
+body main section:nth-child(5) {
   background-image: 
     url('../images/assets/live_illust_1.png'),
     url('../images/assets/live_illust_2.png'),
@@ -501,7 +502,7 @@ body section:nth-child(3) {
 
 /* Discography Section */
 
-body section:nth-child(4) {
+body main section:nth-child(7) {
   background-image: 
     url('../images/assets/discography_illust_1.png'),
     url('../images/assets/discography_illust_2.png'),
@@ -516,9 +517,53 @@ body section:nth-child(4) {
 
 /* Profile Section */
 
+body main section:nth-child(9) {
+  background-repeat: no-repeat;
+  background-position: center top, left bottom, right bottom;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body main section:nth-child(9) div article:nth-child(2) img {
+  display: flex;
+  flex: 1 1 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body main section:nth-child(9) div article:nth-child(2) p {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-size: 0.8rem;
+}
+
+body main section:nth-child(9) div article:nth-child(2) h3 {
+  flex: 0 0 100%;
+  margin-bottom: 1em;
+}
+
+body main section:nth-child(9) div:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body main section:nth-child(9) div:last-of-type > button {
+  margin: 0 auto;
+  width: 50%;
+}
+
+body main section:nth-child(9) div article:nth-child(1),
+body main section:nth-child(9) div article:nth-child(3) {
+  display: none;
+}
+
 /* Video Section */
 
-body section:nth-child(6) {
+body main section:nth-child(11) {
   position: relative;
   background-image: 
     url('../images/assets/video_illust_1.png'),
@@ -533,7 +578,7 @@ body section:nth-child(6) {
   flex-direction: column;
 }
 
-  body section:nth-child(6) > a {
+  body main section:nth-child(11) > a {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -543,16 +588,31 @@ body section:nth-child(6) {
     width: 6em;
   }
 
-  body section:nth-child(6) h2,
-  body section:nth-child(6) h3 {
+  body main section:nth-child(11) h2,
+  body main section:nth-child(11) h3 {
     color: var(--text-color);
   }
 
-  body section:nth-child(6) > a img {
+  body main section:nth-child(11) > a img {
     position: absolute;
     width: 100%;
     bottom: 0;
   }
+
+
+/* Conditions die starten bij medium scherm */
+
+@media (min-width: 40em) { 
+  body main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  body main > img {
+    display: none;
+  }
+}
 
 @media (min-width: 60em) { 
 
@@ -567,11 +627,11 @@ body section:nth-child(6) {
     letter-spacing: .1em;
   }
   
-  body section:nth-child(1) header button {
+  body main section:nth-child(1) header button {
     display: none;
   }
   
-  body section:nth-child(1) header nav {
+  body main section:nth-child(1) header nav {
     display: flex;
     justify-content: center;
     height: inherit;
@@ -582,50 +642,50 @@ body section:nth-child(6) {
     transition: .3s;
   }
   
-  body section:nth-child(1) header nav ul {
+  body main section:nth-child(1) header nav ul {
     display: flex;
     flex-flow: row nowrap;
     align-items: center; 
   }
 
-  body section:nth-child(1) header nav ul li {
+  body main section:nth-child(1) header nav ul li {
     width: auto;
   }
 
-  body section:nth-child(1) header nav ul li a {
+  body main section:nth-child(1) header nav ul li a {
     font-size: 1em;
   }
   
-  body section:nth-child(1) header nav ul li a:hover {
+  body main section:nth-child(1) header nav ul li a:hover {
     color: var(--hover-color);
     cursor: pointer;
   }
 
-  body section:nth-child(1) header nav h1 img {
+  body main section:nth-child(1) header nav h1 img {
     width: 9.8em;
     height: 2.7em;
   }
   
-  body section:nth-child(1) header nav h1 {
+  body main section:nth-child(1) header nav h1 {
     width: 8em;
     margin-left: 2em;
     margin-right: 2em;
   }
   
-  body section:nth-child(1) > img {
+  body main section:nth-child(1) > img {
     width: 45em;
     align-self: center;
   } 
 
-  body section:nth-child(1) header nav ul li:nth-child(9),
-  body section:nth-child(1) header nav ul li:nth-child(10),
-  body section:nth-child(1) header nav ul li:nth-child(11) {
+  body main section:nth-child(1) header nav ul li:nth-child(9),
+  body main section:nth-child(1) header nav ul li:nth-child(10),
+  body main section:nth-child(1) header nav ul li:nth-child(11) {
     width: 2.5em;
   }
 
-  body section:nth-child(1) header nav ul li:nth-child(9) a img,
-  body section:nth-child(1) header nav ul li:nth-child(10) a img,
-  body section:nth-child(1) header nav ul li:nth-child(11) a img {
+  body main section:nth-child(1) header nav ul li:nth-child(9) a img,
+  body main section:nth-child(1) header nav ul li:nth-child(10) a img,
+  body main section:nth-child(1) header nav ul li:nth-child(11) a img {
     width: 2em;
     border-radius: .2em;
   }
