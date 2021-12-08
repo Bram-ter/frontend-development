@@ -78,7 +78,7 @@ body main > img {
   width: 100%;
 }
 
-body section {
+body main section {
   height: 110vh;
   /*transition: 3s;*/
   scroll-snap-align: start;
@@ -518,6 +518,7 @@ body main section:nth-child(7) {
 /* Profile Section */
 
 body main section:nth-child(9) {
+  height: 120vh;
   background-repeat: no-repeat;
   background-position: center top, left bottom, right bottom;
   display: flex;
@@ -551,9 +552,32 @@ body main section:nth-child(9) div:last-of-type {
   justify-content: center;
 }
 
-body main section:nth-child(9) div:last-of-type > button {
+body main section:nth-child(9) div > button {
+  text-align: right;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  font-family: "Posterama";
+  font-weight: bold;
+  border: none;
   margin: 0 auto;
-  width: 50%;
+  margin-top: 1em;
+  border-radius: 1em;
+  width: 70%;
+  height: 8em;
+}
+
+body main section:nth-child(9) div > button:first-of-type {
+  background-image: url("../images/assets/profile_pon_on.png");
+  background-repeat: no-repeat;
+  background-position: -2em -1em;
+  background-size: 16em;
+}
+
+body main section:nth-child(9) div > button:last-of-type {
+  background-image: url("../images/assets/profile_kojima_on.png");
+  background-repeat: no-repeat;
+  background-position: 2em -1em;
+  background-size: 8em;
 }
 
 body main section:nth-child(9) div article:nth-child(1),
@@ -562,7 +586,6 @@ body main section:nth-child(9) div article:nth-child(3) {
 }
 
 /* Video Section */
-
 body main section:nth-child(11) {
   position: relative;
   background-image: 
@@ -603,7 +626,10 @@ body main section:nth-child(11) {
 /* Conditions die starten bij medium scherm */
 
 @media (min-width: 40em) { 
-  body main {
+
+  /* global */
+  body main,
+  body main section {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -611,6 +637,69 @@ body main section:nth-child(11) {
   
   body main > img {
     display: none;
+  }
+
+  /* Profile section */
+
+
+  body main section:nth-child(9) {
+    height: 100vh;
+    justify-content: flex-end;
+  }
+
+  body main section:nth-child(9) div:last-of-type > button {
+    display: none;
+  }
+
+  body main section:nth-child(9) div:last-of-type {
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  body main section:nth-child(9) div article:nth-child(1),
+  body main section:nth-child(9) div article:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  body main section:nth-child(9) div article:nth-child(1) {
+    
+  }
+
+  body main section:nth-child(9) div article:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  } 
+
+  body main section:nth-child(9) div article:nth-child(2) > h3 {
+    flex-basis: 100%;
+  } 
+
+  body main section:nth-child(9) div article:nth-child(2) img {
+    width: 20em;
+    height: 20em;
+    flex: none;
+    margin: 0;
+  }
+
+  body main section:nth-child(9) div article:nth-child(2) p {
+    width: 20em;
+    margin: 0;
+    margin-left: 1em;
+  }
+
+  body main section:nth-child(9) div article:nth-child(3) {
+    
+  }
+
+  body main section:nth-child(9) div article:nth-child(1) > button,
+  body main section:nth-child(9) div article:nth-child(3) > button {
+    background-color: var(--button-color);
+    height: 2em;
   }
 }
 
