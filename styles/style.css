@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   --slider-item-bg: #fed046;
   --slider-item-bg-mobile: #fff6db;
   --slider-nav-item-bg: #757575;
+  --scrollbar-thumb-color: rgba(168,138,50,1.0);
 }
 
 /* Fonts */
@@ -271,83 +272,9 @@ body main section:nth-child(3) > ul li:last-of-type::after {
   content: '';
 }
 
-/* -- Slider -- */
-
-.newsSlider {
-  position: relative; 
-  width: 100%;
-  margin: 0 auto;
-}
-
-.newsSlider > div {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  overflow: scroll;
-  height: 32em;
-  margin: 0; padding: 0
-}
-
-.newsSlider > nav {
-  display: none;
-}
-
-.newsSlider > div ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.newsSlider > div ul li {
-  display: grid;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: .5em;
-  padding-top: .5em;
-}
-
-.newsSlider > div ul li:nth-child(odd) {
-  background-color: var(--slider-item-bg-mobile);
-}
-
-.newsSlider > div ul li a {
-  color: var(--subheading-color);
-  font-size: .8em;
-  margin-top: .3em;
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-.newsSlider > div ul li h3 {
-  font-family: "cdtype-locke";
-  text-transform: uppercase;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  background-color: var(--subheading-color);
-  color: var(--text-color);
-  font-size: .6em;
-  border-radius: .1em;
-  line-height: 2em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.newsSlider > div ul li h4 {
-  font-family: "Roboto-condensed";
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
 /* Live Section */
 
 body main section:nth-child(5) {
-  background-image: 
-    url('../images/assets/live_illust_1.png'),
-    url('../images/assets/live_illust_2.png'),
-    url('../images/assets/live_illust_3.png')
-  ;
-  background-repeat: no-repeat;
-  background-position: left top, left bottom, right bottom;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -356,13 +283,7 @@ body main section:nth-child(5) {
 /* Discography Section */
 
 body main section:nth-child(7) {
-  background-image: 
-    url('../images/assets/discography_illust_1.png'),
-    url('../images/assets/discography_illust_2.png'),
-    url('../images/assets/discography_illust_3.png')
-  ;
-  background-repeat: no-repeat;
-  background-position: center top, left bottom, right bottom;
+  height: 80vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -372,8 +293,6 @@ body main section:nth-child(7) {
 
 body main section:nth-child(9) {
   height: 120vh;
-  background-repeat: no-repeat;
-  background-position: center top, left bottom, right bottom;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -439,6 +358,7 @@ body main section:nth-child(9) div article:nth-child(3) {
 }
 
 /* Video Section */
+
 body main section:nth-child(11) {
   position: relative;
   background-image: 
@@ -480,6 +400,310 @@ body main section:nth-child(11) {
     bottom: 0;
   }
 
+  /* News and live slider */
+
+.newsSlider,
+.liveSlider {
+  position: relative; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+.newsSlider > div,
+.liveSlider > div {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  overflow-y: scroll;
+  height: 32em;
+  margin: 0; padding: 0
+}
+
+.newsSlider > nav,
+.liveSlider > nav  {
+  display: none;
+}
+
+.newsSlider > div ul,
+.liveSlider > div ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newsSlider > div::-webkit-scrollbar,
+.liveSlider > div::-webkit-scrollbar {
+  width: .3em;
+  background-color: var(--yellow-background);
+}
+
+.newsSlider > div::-webkit-scrollbar-thumb,
+.liveSlider > div::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color); 
+}
+
+.newsSlider > div ul li {
+  display: grid;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+
+.newsSlider > div ul li:nth-child(odd),
+.liveSlider > div ul li:nth-child(odd) {
+  background-color: var(--slider-item-bg-mobile);
+}
+
+.newsSlider > div ul li a,
+.liveSlider > div ul li a {
+  color: var(--subheading-color);
+  font-size: .8em;
+  margin-top: .3em;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.newsSlider > div ul li h3 {
+  font-family: "cdtype-locke";
+  text-transform: uppercase;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: var(--subheading-color);
+  color: var(--text-color);
+  font-size: .6em;
+  border-radius: .1em;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.newsSlider > div ul li h4 {
+  font-family: "Roboto-condensed";
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.liveSlider > div ul li {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.liveSlider > div ul li img {
+  width: 8em;
+  grid-row: 1 / span 2;
+}
+
+.liveSlider > div ul li h4 {
+  font-family: "Roboto-condensed";
+  margin-left: .5em;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  
+}
+
+.liveSlider > div ul li p {
+  margin-left: .5em;
+  margin-top: 0;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+/* Discography slider */
+
+.discographySlider {
+  position: relative; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+.discographySlider > nav {
+  display: block;
+}
+
+.discographySlider > div {
+  height: 22em;
+  margin: 0; padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  
+  /* handmatig scrollen is mogelijk */
+  overflow: hidden;
+  
+  /* snappen als er gescrolled wordt - andere helft bij li */
+  scroll-snap-type: inline mandatory;
+  /* smooth als met js gescrolled wordt */
+  scroll-behavior: smooth;
+  /* scrollbar zoveel mogelijk verbergen */
+  -webkit-overflow-scrolling: touch; /* voor iOS*/
+  -ms-overflow-style: none; /* voor IE */
+  scrollbar-width: none; /* voor firefox */
+  
+  /* indien het einde of het begin van de pagina bereikt is met scrollen */
+  /* voorkomen dat de pagina gaat scrollen */
+  overscroll-behavior: contain auto;
+}
+
+.discographySlider > div::-webkit-scrollbar {
+  /* scrollbar zoveel mogelijk verbergen */
+  display: none; /* voor chrome, safari en edge*/
+}
+
+.discographySlider > div ul {
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.discographySlider > div ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.discographySlider > div ul li h3 {
+  font-family: "Roboto-condensed";
+}
+
+.discographySlider > div ul li h4 {
+  font-family: "Roboto-condensed";
+}
+
+.discographySlider > div ul li h5 {
+  font-family: "Noto-sans";
+}
+
+.discographySlider > div ul li img {
+  display: block;
+  width: 60%;
+}
+
+/* de bolletjes container */
+.discographySlider nav ul {
+  position: absolute;
+  left: 2em; right: 2em;
+  margin: 0;
+  padding: .25em;
+  list-style: none;
+  
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+/* de bolletjes wrapper */
+.discographySlider nav li {
+  position: relative;
+  display: flex;
+  margin: 1em;
+  padding: 0;
+}
+
+.discographySlider > nav li::after {
+  position: absolute;
+  bottom: 50%;
+  top: 50%;
+  left: 50%;
+  content: '│';
+  transform: rotate(-90deg);
+}
+
+.discographySlider > nav li:last-of-type::after {
+  content: '';
+}
+
+/* de bolletjes */
+.discographySlider > nav a {
+  display: block;
+  width: .7em;
+  height: .7em;
+  color: currentColor;
+  background-color: var(--slider-nav-item-bg);
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.discographySlider > nav a:hover,
+.discographySlider > nav a:focus {
+  color: green;
+}
+
+.discographySlider > nav a.current {
+  background-color: currentColor;
+}
+
+.discographySlider > a {
+  position: absolute;
+  width: 3em; height: 3em;
+  top: calc(50% - 1.5em);
+
+  color: currentColor;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: 0.5s;
+}
+
+/* initieel staan de links "buiten beeld" */
+.discographySlider > a[href="previous"] {
+  left: .5em;
+  background-color: var(--subheading-color);
+  border-radius: 100%;
+}
+.discographySlider > a[href="next"] {
+  right: .5em;
+  background-color: var(--subheading-color);
+  border-radius: 100%;
+}
+
+/* bij hover en focus schuiven de links in beeld
+.newsSlider:hover > a[href="previous"],
+.newsSlider:focus-within > a[href="previous"] {
+}
+.newsSlider:hover > a[href="next"],
+.newsSlider:focus-within > a[href="next"] {
+}*/
+
+/* prev en next linkbuttons pijltjes */
+.discographySlider > a::before,
+.discographySlider > a::after {
+  content: "";
+  position: absolute;
+  width: 1.5em; height: 4px;
+  background-color: var(--text-color);
+}
+
+.discographySlider > a[href=previous]::before {
+  transform-origin: 2px center;
+  transform: translateY(0) rotate(45deg);
+}
+.discographySlider > a[href=previous]::after {
+  transform-origin: 2px center;
+  transform: translateY(0) rotate(-45deg);
+}
+
+.discographySlider > a[href=next]::before {
+  transform-origin: calc(100% - 2px) center;
+  transform: translateY(0) rotate(45deg);
+}
+.discographySlider > a[href=next]::after {
+  transform-origin: calc(100% - 2px) center;
+  transform: translateY(0) rotate(-45deg);
+}
+
   /* Footer */
 
   footer {
@@ -497,6 +721,7 @@ body main section:nth-child(11) {
 @media (min-width: 40em) { 
 
   /* global */
+
   body main,
   body main section {
     height: 100vh;
@@ -660,7 +885,45 @@ body main section:nth-child(11) {
     border-radius: .2em;
   }
 
-  /* Slider */
+  /* Live section */
+
+  body main section:nth-child(5) {
+    background-image: 
+      url('../images/assets/live_illust_1.png'),
+      url('../images/assets/live_illust_2.png'),
+      url('../images/assets/live_illust_3.png')
+    ;
+    background-repeat: no-repeat;
+    background-position: left top, left bottom, right bottom;
+  }
+
+  /* Discography section */
+
+  body main section:nth-child(7) {
+    height: 100vh;
+    background-image: 
+      url('../images/assets/discography_illust_1.png'),
+      url('../images/assets/discography_illust_2.png'),
+      url('../images/assets/discography_illust_3.png')
+    ;
+    background-repeat: no-repeat;
+    background-position: center top, left bottom, right bottom;
+  }
+
+  /* Video section */
+
+  body main section:nth-child(11) {
+    background-image: 
+      url('../images/assets/video_illust_1.png'),
+      url('../images/assets/video_illust_2.png'),
+      url('../images/assets/video_bg.jpeg')
+    ;
+    background-repeat: no-repeat;
+    background-position: left -2em, right -2em, center;
+    background-size: 50%, 50%, cover;
+  }
+
+  /* News slider */
 
   .newsSlider {
     position: relative; 
@@ -677,6 +940,7 @@ body main section:nth-child(11) {
     margin: 0; padding: 0;
     list-style: none;
     display: flex;
+    flex-direction: row;
     
     /* handmatig scrollen is mogelijk */
     overflow: hidden;
@@ -707,8 +971,7 @@ body main section:nth-child(11) {
     gap: 1ch;
     flex-basis: 100%;
     flex-shrink: 0;
-    scroll-snap-align: center;
-    list-style-type: none;
+
     padding-left: 0;
   }
   
@@ -757,12 +1020,8 @@ body main section:nth-child(11) {
     margin-top: .7em;
   }
   
-  .newsSlider > div ul > img {
-    display: block;
-    width: 100%;
-  }
-  
   /* de bolletjes container */
+
   .newsSlider nav ul {
     position: absolute;
     left: 2em; right: 2em;
@@ -776,6 +1035,7 @@ body main section:nth-child(11) {
   }
   
   /* de bolletjes wrapper */
+
   .newsSlider nav li {
     position: relative;
     display: flex;
@@ -797,6 +1057,7 @@ body main section:nth-child(11) {
   }
   
   /* de bolletjes */
+
   .newsSlider > nav a {
     display: block;
     width: .7em;
@@ -873,20 +1134,14 @@ body main section:nth-child(11) {
     transform-origin: calc(100% - 2px) center;
     transform: translateY(0) rotate(-45deg);
   }
-  
-  .newsSlider > a:hover,
-  .newsSlider > a:focus {
-    color: var(--newsSliderAccentColor);
+
+  /* Discography slider */
+
+  .discographySlider > div {
+    height: 32em;
   }
 
-  body main section:nth-child(11) {
-    background-image: 
-      url('../images/assets/video_illust_1.png'),
-      url('../images/assets/video_illust_2.png'),
-      url('../images/assets/video_bg.jpeg')
-    ;
-    background-repeat: no-repeat;
-    background-position: left -2em, right -2em, center;
-    background-size: 50%, 50%, cover;
+  .discographySlider > div ul li img {
+    width: 40%;
   }
 }

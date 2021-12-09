@@ -41,9 +41,10 @@ function handleIntersect(entry) {
 };
 observer.observe(observerElement);
 
+
 /* -- Slider -- */
 
-function createCaroCarrousel(carrouselID) {
+function createCarrousel(carrouselID) {
 	let carrousel = document.querySelector("#"+carrouselID);
 	let carrouselElementsContainer = carrousel.querySelector(":scope > div");
 	let carrouselElements = carrouselElementsContainer.querySelectorAll("ul");
@@ -206,6 +207,7 @@ function createCaroCarrousel(carrouselID) {
 // nadat de pagina geladen is, de carrousels activeren
 (function() {
   // hier de id gebruiken van de section in de html
-  createCaroCarrousel("newsSlider");
+  createCarrousel("newsSlider");
+  createCarrousel("discographySlider");
   //je kunt hier ook meerdere carrousellen activeren
 })();
