@@ -87,8 +87,8 @@ samen met je groepje opstellen
 
 | Bram     | Xiao Nan         | Kevin    | Tijn        |
 | ---      | ---              | ---      | ---         |
-| Geen punten | aria-label | figure/figcaption | Geen punten |
-|          | feedback op haar html | achtergrondimg |    |
+|  | aria-label | figure/figcaption |  |
+|          | feedback op haar html | achtergrondimg |   |
 |          |                  |          |             |
 | ...      | ...              | ...      | ...         |
 
@@ -116,19 +116,19 @@ Ik ben verder gegaan aan mijn HTML en heb hierbij wat content toegevoegd aan mij
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Bram     | Xiao Nan          | Kevin    | Tijn       |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+| toevoegen van een slider | witruimte tussen afbeelding en section weghalen | hamburgermenu |    |
+|                |                    |              |                  |
 | ...            | ...                | ...          | ...              |
 
-Bonus tip van Yunus: Schrijf zo helder mogelijke css.
+Bonus tip van Yunus: Schrijf zo helder mogelijke css, toepassen van bepaalde structuur kan helpen.
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
+- Door de link naar Sanne zijn voorbeelden over sliders, wist ik beter hoe ik mijn eigen sliders aan moest pakken.
+- Ik ben iets meer te weten gekomen over debuggen, omdat Xiao Nan een probleem had waar de studentassistenten ook niet zo snel een antwoord op wisten.
 - nog een punt
 - ...
 
@@ -233,8 +233,12 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+2. https://medium.com/elegant-seagulls/parallax-and-scroll-triggered-animations-with-the-intersection-observer-api-and-gsap3-53b58c80b2fa
+3. https://stackhowto.com/how-to-remove-white-space-under-an-image-using-css/
+4. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
+5. https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event
+6. https://keycode.info/
+7. https://www.sinds1971.nl/fed/bolletjes/index.html
 
 </details>
