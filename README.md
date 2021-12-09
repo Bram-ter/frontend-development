@@ -147,7 +147,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 #### Overgeslagen hamburgericoon (Toetsenbord)
 Bij het tabben door de website werd op mobiel elke keer het hamburgermenu overgeslagen en ging je meteen naar de live section toe. 
 
-Ik had hier naar gekeken en wat het had opgelost was om de tabIndex van 0 naar 1 te veranderen.
+Ik had hiernaar gekeken en wat het had opgelost was om de tabIndex van 0 naar 1 te veranderen.
 
 <img src="images/tabindex0.png" width="375px" alt="Image waar de tabindex 0 is">
 <img src="images/tabindex1.png" width="375px" alt="Image waar de tabindex 1 is">
@@ -158,9 +158,9 @@ Bij het tabben kwam ik er achter dat als het menu openstaat hij gewoon naar de v
 
 Michiel en ik hadden dit nagevraagd aan Sanne en hij gaf ons een paar links waarmee we dit probleem aan konden pakken.
 
-https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event
-https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
-https://keycode.info/
+1. https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event
+2. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
+3. https://keycode.info/
 
 Ik heb besloten hiernaar te gaan kijken als ik tijd over heb.
 
