@@ -129,13 +129,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 - Door de link naar Sanne zijn voorbeelden over sliders, wist ik beter hoe ik mijn eigen sliders aan moest pakken.
 - Ik ben iets meer te weten gekomen over debuggen, omdat Xiao Nan een probleem had waar de studentassistenten ook niet zo snel een antwoord op wisten.
-- nog een punt
-- ...
 
 </details>
-
-
-
 
 
 ## Toegankelijkheidstest (week 4)
@@ -144,30 +139,48 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
-Lijst met je bevindingen die in de test naar voren kwamen:
+1. Button voor het hamburgermenu word overgeslagen aan het begin.
+2. Als het menu openstaat is andere content op de pagina nog gewoon toegankelijk wat niet hoort.
+3. Met de screenreader was er een goede scheiding tussen Engelse en Japanese content en veranderde hij goed van stem. Alleen konder sommige aria-labels nog duidelijker.
+4. Met de wazige bril was sommige tekst soms slecht leesbaar, dit gelde vooral voor de content van de slider.
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Overgeslagen hamburgericoon (Toetsenbord)
+Bij het tabben door de website werd op mobiel elke keer het hamburgermenu overgeslagen en ging je meteen naar de live section toe. 
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Ik had hier naar gekeken en wat het had opgelost was om de tabIndex van 0 naar 1 te veranderen.
 
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+<img src="images/tabindex0.png" width="375px" alt="Image waar de tabindex 0 is">
+<img src="images/tabindex1.png" width="375px" alt="Image waar de tabindex 1 is">
 
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Alle content toegankelijk als menu openstaat (Toetsenbord)
+Bij het tabben kwam ik er achter dat als het menu openstaat hij gewoon naar de volgende section toe tabbed als je bij het laatste menu item bent.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Michiel en ik hadden dit nagevraagd aan Sanne en hij gaf ons een paar links waarmee we dit probleem aan konden pakken.
+
+https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event
+https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
+https://keycode.info/
+
+Ik heb besloten hiernaar te gaan kijken als ik tijd over heb.
+
+#### Zowel Japans als Engels (screenreader)
+Voor mijn website was het een uitdaging om zowel Japans en Engels leesbaar te kunnen maken met de screenreader. Gelukkig ging dit goed omdat ik al vrij vroeg op Japanse elementen de lang had verandert naar "ja". Het enige wat soms nog een beetje moeizaam ging was dat ik een element slecht had uitgelegd of dat twee elementen die gewrapped waren niet goed voor werder gelezen.
+
+<img src="images/back_to_top_button_before.png" width="375px" alt="back to top button voor veranderingen">
+
+Na een gesprekje te hebben gehad met Sanne vertelde hij over aria-hidden="true". Ik heb dit opgezocht en toen zelf proberen te gebruiken.
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute
+
+<img src="images/back_to_top_button_after.png" width="375px" alt="back to top button na veranderingen">
+
+
+#### Sommige content onleesbaar voor slechtzienden
+Door een wazige bril op te hebben gezet kwam ik erachter dat kleine dingen in de slider bijvoorbeeld slecht leesbaar waren. Daarom heb ik besloten de mobiele versie van de website ook mee te maken. De titels waren wel groot genoeg om te lezen met de bril op. Ik zou dit op kunnen lossen door op mobiel specifiek, de kleine content uit de slider bijvoorbeeld grotere blokken te kunnen geven.
+
+<img src="images/slider_voor.png" width="375px" alt="de slider voor de veranderingen">
+<img src="images/slider_na.png" width="375px" alt="de slider na de veranderingen">
+
 
 </details>
 
@@ -181,7 +194,15 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+Ik heb een tijd zitten twijfelen om mobiel anders te maken dan desktop. In de echte site is er een aparte versie voor mobiel en desktop, hij stemt dit automatisch af op het device dat gebruikt word. Hierom leek mij dit leuk om dit ook te proberen, ik heb hierom nu images toegevoegd die tussen de section geplaatst worden als mobiele banners. Deze banners krijgen op groot scherm een display: none; zodat ze zichzelf verbergen. Ook werken de sliders anders op mobiel omdat ze zo beter leesbaar zijn.
+
+Na het toevoegen van de banners op mobiel kwam hier helaas witruimte onder te zitten die ik niet weg kon krijgen. Na met Yunus gepraat te hebben vonden wij dit artikel:
+https://stackhowto.com/how-to-remove-white-space-under-an-image-using-css/
+
+In dit artikel stond dat je een display: block; op de image moest zetten. Dit heb ik ook gedaan en toen ging gelukkig de witruimte weg.
+
+<img src="images/display_block.png" width="375px" alt="display block op image">
 
 
 ### Agenda voor meeting
