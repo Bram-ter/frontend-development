@@ -12,10 +12,11 @@ function mobileMenu() {
 
 hamburger.addEventListener("click", mobileMenu);
 
+
 /* -- Intersection observer -- */
 
 // Target element to be observed.
-const observerElement = document.querySelector('#live');
+const observerElement = document.querySelector('#news');
 
 // Intersection Observer Configuration
 const observerOptions = {
