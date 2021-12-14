@@ -208,20 +208,18 @@ In dit artikel stond dat je een display: block; op de image moest zetten. Dit he
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Bram      | Kevin         | Xiao Nan   |       
+| ---            | ---                | ---          | 
+| Animation voor sestion  | Niet meeschalende foto + tekst | rare witruimte boven foto   | 
+| Mediaqueries | Overscroll-behavior | Javascript | 
+| ...            | ...                | ...          | 
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik heb verduidelijking gekregen hoe ik de animaties precies aan kon pakken.
+- Kevin en Xiao Nan weten nu hoe ze de rare witruimte bij een foto ook weg kunnen krijgen als het ooit bij ze gebeurd.
 
 </details>
 
