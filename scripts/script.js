@@ -182,7 +182,7 @@ function createCarrousel(carrouselID) {
   createCarrousel("newsSlider");
   createCarrousel("liveSlider");
   createCarrousel("discographySlider");
-  /*createCarrousel("videoSlider");*/
+  createCarrousel("videoSlider");
   //je kunt hier ook meerdere carrousellen activeren
 })();
 
