@@ -180,7 +180,9 @@ function createCarrousel(carrouselID) {
 (function() {
   // hier de id gebruiken van de section in de html
   createCarrousel("newsSlider");
+  createCarrousel("liveSlider");
   createCarrousel("discographySlider");
+  /*createCarrousel("videoSlider");*/
   //je kunt hier ook meerdere carrousellen activeren
 })();
 

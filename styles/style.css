@@ -52,6 +52,30 @@ h1, h2, h3, h4, h5, h6 {
   src: url("../fonts/cdtype_locke/cdtype_locke_regular.otf") format("opentype");
 }
 
+/* keyframes */
+
+@keyframes arrowMove {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}
+
+@keyframes Upanddown {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(0, 5px);
+  }
+}
+
 /* Reusable Classes */
 
 .active {
@@ -357,6 +381,7 @@ body main section:nth-child(9) div article:nth-child(3) {
 /* Video Section */
 
 body main section:nth-child(11) {
+  height: 110vh;
   position: relative;
   background-image: 
     url('../images/assets/video_bg_mobile.jpeg')
@@ -448,7 +473,7 @@ body main section:nth-child(11) {
 }
 
 .newsSlider > div ul li:nth-child(even),
-.liveSlider > div ul li:nth-child(odd) {
+.liveSlider > div ul li:nth-child(even) {
   background-color: var(--text-color);
 }
 
@@ -489,12 +514,15 @@ body main section:nth-child(11) {
 }
 
 .liveSlider > div ul li {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
   padding-left: 2em;
   padding-right: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+.liveSlider > div ul li a {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 .liveSlider > div ul li img {
@@ -517,19 +545,22 @@ body main section:nth-child(11) {
   grid-column-end: 4;
 }
 
-/* Discography slider */
+/* Discography en Video slider */
 
-.discographySlider {
+.discographySlider,
+.videoSlider {
   position: relative; 
   width: 100%;
   margin: 0 auto;
 }
 
-.discographySlider > nav {
+.discographySlider > nav,
+.videoSlider > nav {
   display: block;
 }
 
-.discographySlider > div {
+.discographySlider > div,
+.videoSlider > div {
   height: 26em;
   margin: 0; padding: 0;
   list-style: none;
@@ -553,12 +584,19 @@ body main section:nth-child(11) {
   overscroll-behavior: contain auto;
 }
 
-.discographySlider > div::-webkit-scrollbar {
+.videoSlider > div {
+  height: 25em;
+  color: var(--text-color);
+}
+
+.discographySlider > div::-webkit-scrollbar,
+.videoSlider > div::-webkit-scrollbar {
   /* scrollbar zoveel mogelijk verbergen */
   display: none; /* voor chrome, safari en edge*/
 }
 
-.discographySlider > div ul {
+.discographySlider > div ul,
+.videoSlider > div ul {
   display: flex;
   justify-content: center;
   flex-basis: 100%;
@@ -575,15 +613,34 @@ body main section:nth-child(11) {
   align-items: center;
 }
 
+.videoSlider div ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.videoSlider div ul li iframe {
+  width: 15em;
+  height: 8em;
+}
+
 .discographySlider > div ul li h3 {
   font-family: "Roboto-condensed";
 }
 
-.discographySlider > div ul li h4 {
+.discographySlider > div ul li h4,
+.videoSlider > div ul li h4 {
   font-family: "Roboto-condensed";
 }
 
-.discographySlider > div ul li h5 {
+.videoSlider > div ul li h4 {
+  margin-top: 1em;
+  width: 15em;
+}
+
+.discographySlider > div ul li h5,
+.videoSlider > div ul li h5 {
   font-family: "Noto-sans";
 }
 
@@ -594,8 +651,13 @@ body main section:nth-child(11) {
   box-shadow: 0em 0em 0em .3em var(--subheading-color);
 }
 
+.videoSlider > div ul li img {
+  width: 20em;
+}
+
 /* de bolletjes container */
-.discographySlider nav ul {
+.discographySlider nav ul,
+.videoSlider nav ul {
   position: absolute;
   left: 2em; right: 2em;
   margin: 0;
@@ -608,14 +670,16 @@ body main section:nth-child(11) {
 }
 
 /* de bolletjes wrapper */
-.discographySlider nav li {
+.discographySlider nav li,
+.videoSlider nav li {
   position: relative;
   display: flex;
   margin: 1em;
   padding: 0;
 }
 
-.discographySlider > nav li::after {
+.discographySlider > nav li::after,
+.videoSlider > nav li::after {
   position: absolute;
   bottom: 50%;
   top: 50%;
@@ -624,12 +688,14 @@ body main section:nth-child(11) {
   transform: rotate(-90deg);
 }
 
-.discographySlider > nav li:last-of-type::after {
+.discographySlider > nav li:last-of-type::after,
+.videoSlider > nav li:last-of-type::after {
   content: '';
 }
 
 /* de bolletjes */
-.discographySlider > nav a {
+.discographySlider > nav a,
+.videoSlider > nav a {
   display: block;
   width: .7em;
   height: .7em;
@@ -640,16 +706,13 @@ body main section:nth-child(11) {
   transition: 0.5s;
 }
 
-.discographySlider > nav a:hover,
-.discographySlider > nav a:focus {
-  color: green;
+.discographySlider > nav a.current,
+.videoSlider > nav a.current {
+  background-color: var(--text-color);
 }
 
-.discographySlider > nav a.current {
-  background-color: currentColor;
-}
-
-.discographySlider > a {
+.discographySlider > a,
+.videoSlider > a {
   position: absolute;
   width: 3em; height: 3em;
   top: calc(50% - 1.5em);
@@ -663,41 +726,56 @@ body main section:nth-child(11) {
   transition: 0.5s;
 }
 
-/* initieel staan de links "buiten beeld" */
-.discographySlider > a[href="previous"] {
-  left: .5em;
-  background-color: var(--subheading-color);
-  border-radius: 100%;
+.videoSlider > a {
+  top: 20%;
 }
-.discographySlider > a[href="next"] {
+
+/* initieel staan de links "buiten beeld" */
+.discographySlider > a[href="previous"],
+.videoSlider > a[href="previous"] {
+  left: .5em;
+}
+
+.discographySlider > a[href="next"],
+.videoSlider > a[href="next"] {
   right: .5em;
+}
+
+.discographySlider > a[href="next"],
+.discographySlider > a[href="previous"] {
   background-color: var(--subheading-color);
   border-radius: 100%;
 }
 
 /* prev en next linkbuttons pijltjes */
 .discographySlider > a::before,
-.discographySlider > a::after {
+.discographySlider > a::after,
+.videoSlider > a::before, 
+.videoSlider > a::after {
   content: "";
   position: absolute;
   width: 1.5em; height: 4px;
   background-color: var(--text-color);
 }
 
-.discographySlider > a[href=previous]::before {
+.discographySlider > a[href=previous]::before,
+.videoSlider > a[href=previous]::before {
   transform-origin: 2px center;
   transform: translateY(0) rotate(45deg);
 }
-.discographySlider > a[href=previous]::after {
+.discographySlider > a[href=previous]::after,
+.videoSlider > a[href=previous]::after {
   transform-origin: 2px center;
   transform: translateY(0) rotate(-45deg);
 }
 
-.discographySlider > a[href=next]::before {
+.discographySlider > a[href=next]::before,
+.videoSlider > a[href=next]::before {
   transform-origin: calc(100% - 2px) center;
   transform: translateY(0) rotate(45deg);
 }
-.discographySlider > a[href=next]::after {
+.discographySlider > a[href=next]::after,
+.videoSlider > a[href=next]::after{
   transform-origin: calc(100% - 2px) center;
   transform: translateY(0) rotate(-45deg);
 }
@@ -717,6 +795,17 @@ body main section:nth-child(11) {
 /* Conditions die starten bij medium scherm */
 
 @media (min-width: 40em) { 
+
+  /* Arrow animation */
+
+  main section div > a {
+    animation: arrowMove 1s ease-in-out infinite;
+  }
+
+  main section div > a:hover[href="previous"],
+  main section div > a:hover[href="next"] {
+    animation-play-state: paused;
+  }
 
   /* global */
 
@@ -753,6 +842,33 @@ body main section:nth-child(11) {
     background-position: left top, left bottom;
   }
 
+  /* Live section */
+
+  body main section:nth-child(5) {
+    background-image: 
+      url('../images/assets/live_illust_1.png'),
+      url('../images/assets/live_illust_2.png'),
+      url('../images/assets/live_illust_3.png')
+    ;
+    background-repeat: no-repeat;
+    background-position: left top, left bottom, right bottom;
+    background-size: 15em, 15em, 15em;
+  }
+
+  /* Discography setion */
+
+  body main section:nth-child(7) {
+    height: 100vh;
+    background-image: 
+      url('../images/assets/discography_illust_1.png'),
+      url('../images/assets/discography_illust_2.png'),
+      url('../images/assets/discography_illust_3.png')
+    ;
+    background-repeat: no-repeat;
+    background-position: center top, left bottom, right bottom;
+    background-size: 40em, 10em, 10em;
+  }
+
   /* Profile section */
 
   body main section:nth-child(9) {
@@ -765,40 +881,54 @@ body main section:nth-child(11) {
   }
 
   body main section:nth-child(9) div:last-of-type {
-    width: 70%;
-    margin: 0 auto;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
   }
 
-  body main section:nth-child(9) div article:nth-child(1),
+  body main section:nth-child(9) div article:nth-child(1), 
   body main section:nth-child(9) div article:nth-child(3) {
     display: flex;
     flex-direction: column;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  body main section:nth-child(9) div article:nth-child(1) > a, 
+  body main section:nth-child(9) div article:nth-child(3) > a {
+    width: 15em;
     height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
-  body main section:nth-child(9) div article:nth-child(2) {
+  body main section:nth-child(9) div article:nth-child(1) > a {
+    background-image: url('../images/assets/profile_pon_off.png');
+  }
+
+  body main section:nth-child(9) div article:nth-child(1) > a:hover {
+    background-image: url('../images/assets/profile_pon_on.png');
+  }
+
+  body main section:nth-child(9) div article:nth-child(3) > a {
+    background-image: url('../images/assets/profile_kojima_off.png');
+  }
+
+  body main section:nth-child(9) div article:nth-child(3) > a:hover {
+    background-image: url('../images/assets/profile_kojima_on.png');
+  }
+
+  body main section:nth-child(9) div article:nth-child(2) > div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
   } 
 
-  body main section:nth-child(9) div article:nth-child(2) > h3 {
-    flex-basis: 100%;
+  body main section:nth-child(9) div article:nth-child(2) > div p {
+    margin-top: 1em;
   } 
-
-  body main section:nth-child(9) div article:nth-child(2) img {
-    width: 20em;
-    height: 20em;
-    flex: none;
-    margin: 0;
-  }
 
   body main section:nth-child(9) div article:nth-child(2) p {
     width: 20em;
     margin: 0;
-    margin-left: 1em;
   }
 
   body main section:nth-child(9) div article:nth-child(1) > button,
@@ -813,7 +943,8 @@ body main section:nth-child(11) {
     height: 5em;
   }
 
-  .newsSlider > div {
+  .newsSlider > div,
+  .liveSlider > div {
     width: 80%;
     height: 32em;
     margin: 0 auto; padding: 0
@@ -832,11 +963,32 @@ body main section:nth-child(11) {
   }
 
   /* Discography slider */ 
-    .discographySlider > div ul li img {
-      width: 15em;
+
+  .discographySlider > div ul li {
+    gap: 1em;
+  }
+
+  .discographySlider > div ul li img {
+    width: 15em;
+  }
+
+  .discographySlider > a[href="previous"] {
+    left: 20%;
+  }
+  .discographySlider > a[href="next"] {
+    right: 20%;
+  }
+
+  .discographySlider > a[href="previous"],
+  .discographySlider > a[href="next"] {
+    background-color: transparent;
+  }
+
+  .discographySlider > a::before, 
+  .discographySlider > a::after {
+    background-color: var(--subheading-color);
   }
 }
-
 
 
 @media (min-width: 60em) { 
@@ -936,30 +1088,22 @@ body main section:nth-child(11) {
     font-size: 1.2em;
   }
 
-  /* Live section */
+  /* Profile section */ 
 
-  body main section:nth-child(5) {
-    background-image: 
-      url('../images/assets/live_illust_1.png'),
-      url('../images/assets/live_illust_2.png'),
-      url('../images/assets/live_illust_3.png')
-    ;
-    background-repeat: no-repeat;
-    background-position: left top, left bottom, right bottom;
+  body main section:nth-child(9) {
+    justify-content: center;
   }
 
-  /* Discography section */
-
-  body main section:nth-child(7) {
-    height: 100vh;
-    background-image: 
-      url('../images/assets/discography_illust_1.png'),
-      url('../images/assets/discography_illust_2.png'),
-      url('../images/assets/discography_illust_3.png')
-    ;
-    background-repeat: no-repeat;
-    background-position: center top, left bottom, right bottom;
+  body main section:nth-child(9) div article:nth-child(1) > a, 
+  body main section:nth-child(9) div article:nth-child(3) > a {
+    width: 20em;
+    height: 100%;
   }
+
+  body main section:nth-child(9) div article:nth-child(2) > div {
+    display: flex;
+    flex-direction: row;
+  } 
 
   /* Video section */
 
@@ -971,15 +1115,31 @@ body main section:nth-child(11) {
     ;
     background-repeat: no-repeat;
     background-position: left -2em, right -2em, center;
-    background-size: 50%, 50%, cover;
+    background-size: 25%, 25%, cover;
+  }
+
+  body main section:nth-child(11) > a:first-of-type {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    right: .5em;
+    bottom: .5em;
+  }
+
+  body main section:nth-child(11) > a img {
+    width: 7em;
+  }
+
+  body main section:nth-child(11) > a > img:first-of-type {
+    animation: Upanddown 1.5s ease-in-out infinite;
   }
 
   /* News slider */
 
   .newsSlider {
-    position: relative; 
     width: 80%;
-    margin: 0 auto;
   }
 
   .newsSlider > nav {
@@ -1134,7 +1294,7 @@ body main section:nth-child(11) {
   
   .newsSlider > a {
     position: absolute;
-    width: 3em; height: 3em;
+    width: 5em; height: 3em;
     top: calc(50% - 1.5em);
   
     color: currentColor;
@@ -1183,9 +1343,204 @@ body main section:nth-child(11) {
 
   /* Live slider */ 
 
-    .liveSlider > div ul li:nth-child(even),
-    .liveSlider > div ul li:nth-child(odd) {
+  .liveSlider {
+    position: relative; 
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .liveSlider > nav {
+    display: block;
+  }
+  
+  .liveSlider > div {
+    position: relative;
+    height: 25em;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+    /* handmatig scrollen is mogelijk */
+    overflow: hidden;
+    
+    /* snappen als er gescrolled wordt - andere helft bij li */
+    scroll-snap-type: inline mandatory;
+    /* smooth als met js gescrolled wordt */
+    scroll-behavior: smooth;
+    /* scrollbar zoveel mogelijk verbergen */
+    -webkit-overflow-scrolling: touch; /* voor iOS*/
+    -ms-overflow-style: none; /* voor IE */
+    scrollbar-width: none; /* voor firefox */
+    
+    /* indien het einde of het begin van de pagina bereikt is met scrollen */
+    /* voorkomen dat de pagina gaat scrollen */
+    overscroll-behavior: contain auto;
+  }
+  
+  .liveSlider > div::-webkit-scrollbar {
+    /* scrollbar zoveel mogelijk verbergen */
+    display: none; /* voor chrome, safari en edge*/
+  }
+  
+  .liveSlider > div ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1ch;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    padding-left: 0;
+  }
+
+  .liveSlider > div ul li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .liveSlider > div ul li img {
+    border-radius: .2em;
+    width: 100%;
+    max-height: 9.5em;
+  }
+  
+  .liveSlider > div ul li h4 {
+    font-family: "Roboto-condensed";
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: .7em;
+    margin-bottom: .7em;
+    margin-left: .5em;
+  }
+  
+  .liveSlider > div ul li p {
+    width: 90%;
+    justify-self: center;
+    margin-top: .7em;
+  }
+
+  .liveSlider > div ul li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+  }
+
+  .liveSlider > div ul li:nth-child(even),
+  .liveSlider > div ul li:nth-child(odd) {
     background-color: transparent;
+  }
+  
+  /* de bolletjes container */
+
+  .liveSlider nav ul {
+    position: absolute;
+    left: 2em; right: 2em;
+    margin: 0;
+    padding: .25em;
+    list-style: none;
+    
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+  
+  /* de bolletjes wrapper */
+
+  .liveSlider nav li {
+    position: relative;
+    display: flex;
+    margin: 1em;
+    padding: 0;
+  }
+  
+  .liveSlider > nav li::after {
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    left: 50%;
+    content: '│';
+    transform: rotate(-90deg);
+  }
+  
+  .liveSlider > nav li:last-of-type::after {
+    content: '';
+  }
+  
+  /* de bolletjes */
+
+  .liveSlider > nav a {
+    display: block;
+    width: .7em;
+    height: .7em;
+    color: currentColor;
+    background-color: var(--slider-nav-item-bg);
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  
+  .liveSlider > nav a:hover,
+  .liveSlider > nav a:focus {
+    color: green;
+  }
+  
+  .liveSlider > nav a.current {
+    background-color: currentColor;
+  }
+  
+  .liveSlider > a {
+    position: absolute;
+    width: 3em; height: 3em;
+    top: calc(50% - 1.5em);
+  
+    color: currentColor;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 0.5s;
+  }
+  
+  /* initieel staan de links "buiten beeld" */
+  .liveSlider > a[href="previous"] {
+    left: 0em;
+  }
+  .liveSlider > a[href="next"] {
+    right: 0em;
+  }
+  
+  /* prev en next linkbuttons pijltjes */
+  .liveSlider > a::before,
+  .liveSlider > a::after {
+    content: "";
+    position: absolute;
+    width: 2em; height: 4px;
+    background-color: currentColor;
+  }
+  
+  .liveSlider > a[href=previous]::before {
+    transform-origin: 2px center;
+    transform: translateY(0) rotate(45deg);
+  }
+  .liveSlider > a[href=previous]::after {
+    transform-origin: 2px center;
+    transform: translateY(0) rotate(-45deg);
+  }
+  
+  .liveSlider > a[href=next]::before {
+    transform-origin: calc(100% - 2px) center;
+    transform: translateY(0) rotate(45deg);
+  }
+  .liveSlider > a[href=next]::after {
+    transform-origin: calc(100% - 2px) center;
+    transform: translateY(0) rotate(-45deg);
   }
 
   /* Discography slider */
@@ -1203,4 +1558,13 @@ body main section:nth-child(11) {
   .discographySlider > div ul li img {
     width: 20em;
   }
+
+  .discographySlider > a[href="previous"] {
+    left: 5%;
+  }
+
+  .discographySlider > a[href="next"] {
+    right: 5%;
+  }
 }
+
