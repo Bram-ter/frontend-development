@@ -66,14 +66,12 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../images/assets/btn_nav_on.png) !important;
 }
 
-.testClass {
-  background-color: pink !important;
-}
-
 /* Global */
 
 body main {
+  position: relative;
   height: 100vh;
+  scroll-snap-type: y mandatory;
 }
 
 body main > img {
@@ -82,8 +80,7 @@ body main > img {
 }
 
 body main section {
-  height: 110vh;
-  /*transition: 3s;*/
+  height: 100vh;
   scroll-snap-align: start;
   background-size: 8em, 8em;
 }
@@ -678,14 +675,6 @@ body main section:nth-child(11) {
   border-radius: 100%;
 }
 
-/* bij hover en focus schuiven de links in beeld
-.newsSlider:hover > a[href="previous"],
-.newsSlider:focus-within > a[href="previous"] {
-}
-.newsSlider:hover > a[href="next"],
-.newsSlider:focus-within > a[href="next"] {
-}*/
-
 /* prev en next linkbuttons pijltjes */
 .discographySlider > a::before,
 .discographySlider > a::after {
@@ -840,6 +829,11 @@ body main section:nth-child(11) {
 
   .newsSlider > div ul li h4 {
     font-size: 1.2em;
+  }
+
+  /* Discography slider */ 
+    .discographySlider > div ul li img {
+      width: 15em;
   }
 }
 
@@ -1160,14 +1154,6 @@ body main section:nth-child(11) {
     right: 0em;
   }
   
-  /* bij hover en focus schuiven de links in beeld
-  .newsSlider:hover > a[href="previous"],
-  .newsSlider:focus-within > a[href="previous"] {
-  }
-  .newsSlider:hover > a[href="next"],
-  .newsSlider:focus-within > a[href="next"] {
-  }*/
-  
   /* prev en next linkbuttons pijltjes */
   .newsSlider > a::before,
   .newsSlider > a::after {
@@ -1204,12 +1190,17 @@ body main section:nth-child(11) {
 
   /* Discography slider */
 
+  .discographySlider {
+    width: 65%;
+    margin: 0 auto;
+  }
+
   .discographySlider > div {
     height: 32em;
+    width: 100%;
   }
 
   .discographySlider > div ul li img {
-    width: 50%;
-    min-width: 15em;
+    width: 20em;
   }
 }
