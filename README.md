@@ -210,7 +210,7 @@ samen met je groepje opstellen
 
 | Bram      | Kevin         | Xiao Nan   |       
 | ---            | ---                | ---          | 
-| Animation voor sestion  | Niet meeschalende foto + tekst | rare witruimte boven foto   | 
+| Animation voor section  | Niet meeschalende foto + tekst | rare witruimte boven foto   | 
 | Mediaqueries | Overscroll-behavior | Javascript | 
 | ...            | ...                | ...          | 
 
@@ -218,8 +218,8 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- Ik heb verduidelijking gekregen hoe ik de animaties precies aan kon pakken.
-- Kevin en Xiao Nan weten nu hoe ze de rare witruimte bij een foto ook weg kunnen krijgen als het ooit bij ze gebeurd.
+- Ik heb verduidelijking gekregen over hoe ik de animaties precies aan kan pakken.
+- Kevin en Xiao Nan weten nu hoe ze de rare witruimte bij een foto weg kunnen krijgen als het ooit bij ze gebeurd.
 
 </details>
 
