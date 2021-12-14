@@ -235,7 +235,18 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+De laatste week was voor mij nog wel een beetje aanpoten. Ik wilde nog best veel dingen van mijn website uitwerken. Ik heb bijvoorbeeld kleine animaties uitgewerkt voor de pijltjes van de sliders en de button in de video section waarmee je weer omhoog kon scrollen.
+
+<img src="images/keyframes_van_de_animaties.png" width="375px" alt="keyframes van de animaties">
+
+Ook heb ik geprobeerd om meerdere sliders in de website te zetten. Dit ging een beetje moeizaam omdat ik het moeilijk vond om de code van Sanne aan te passen. Dit was niet omdat Sanne warrige code schreef, maar omdat ik zelf nog niet heel goed ben in JavaScript :)
+
+<img src="images/foutmelding.png" width="375px" alt="foutmelding">
+
+Ik heb uiteindelijk Deanna om hulp gevraagd omdat ik er zelf niet uitkwam. Nadat ik haar om hulp had gevraagd kwam ik pas achter de fout. Toen ik aan het begin van de dag de sliders in de website ging zetten had ik ze allemaal dezelfde IDs gegeven, element1, element2 enz. Dit mag natuurlijk niet dus had ik ze aangepast, maar ik had de bolletjes hun href niet mee verandert waardoor ze stuk gingen. Dit realiseerde ik me natuurlijk pas nadat ik Deanna een berichtje had gestuurd. 
+
+<img src="images/nav_voor.png" width="375px" alt="nav voor mijn aanpassing">
+<img src="images/nav_na.png" width="375px" alt="na na mijn aanpassing">
 
 ### Screenshot(s)
 
