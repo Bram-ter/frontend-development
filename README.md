@@ -271,6 +271,8 @@ Er zijn een hele boel dingen die ik helaas nog niet uit heb kunnen werken omdat 
 
 ### Screenshot(s)
 
+Hieronder zijn de eindresultaten van mijn website te zien. Door de scroll-snap kan ik helaas mijn medium en large screen niet screenshotten, maar deze zijn gelukkig in mijn testomgeving te vinden. 
+
 <img src="images/website_mobile.jpg" width="375px" alt="mijn website op mobiel">
 
 </details>
