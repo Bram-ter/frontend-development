@@ -257,7 +257,7 @@ Ik heb me de laatste dag bezig gehouden met alles netjes maken. Ik heb bijvoorbe
 
 Er zijn een hele boel dingen die ik helaas nog niet uit heb kunnen werken omdat ik hier niet genoeg tijd voor over had. 
 
-- De modal popup die opkomt als je op de detail button drukt.
+- De modal popup die opkomt als je op de detail button drukt in de profile section.
 - Op mobiel zorgen dat je in het hamburger menu blijft als je hem opent doormiddel van tabben.
 - Nav menu met dots aan de zijkant dat verandert op basis van welke section je zit. 
 - Sticky menu dat met je mee scrollt.
