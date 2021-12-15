@@ -230,7 +230,7 @@ De laatste week was voor mij nog wel een beetje aanpoten. Ik wilde nog best veel
 
 Links zijn de keyframes van de arrow animatie te zien, en rechts die van de section animaties.
 
-<img src="images/keyframes_van_de_arrow_animaties.png" width="375px" alt="keyframes van de arrow animaties" style="vertical-align: top;">
+<img src="images/keyframes_van_de_arrow_animaties.png" width="375px" alt="keyframes van de arrow animaties">
 <img src="images/keyframes_van_de_section_animaties.png" width="375px" alt="keyframes van de section animaties">
 
 Ook heb ik geprobeerd om meerdere sliders in de website te zetten. Dit ging een beetje moeizaam omdat ik het moeilijk vond om de code van Sanne aan te passen. Dit was niet omdat Sanne warrige code schreef, maar omdat ik zelf nog niet heel goed ben in JavaScript :)
