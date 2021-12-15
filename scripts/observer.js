@@ -8,14 +8,14 @@ const options = {
 }
 
 const addClass = (el) => {
-	if (!el.classList.contains('testClass')) {
-		el.classList.add('testClass')
+	if (!el.classList.contains('activeItem')) {
+		el.classList.add('activeItem')
 	}
 }
 
 const removeClass = (el) => {
-	if (el.classList.contains('testClass')) {
-		el.classList.remove('testClass')
+	if (el.classList.contains('activeItem')) {
+		el.classList.remove('activeItem')
 	}
 }
 
