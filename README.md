@@ -260,7 +260,7 @@ Ik vond het fijne aan dit voorbeeld dat hij aparte functies had gemaakt voor het
 
 Ik heb me de laatste dag bezig gehouden met alles netjes maken. Ik heb bijvoorbeeld de section animaties toegevoegd. Dit had ik de dag ervoor ook geprobeerd met een ::before en ::after maar dat lukte mij helaas niet. Daarom had ik op de laatste dag ervoor gekozen om dit toch te doen met een aparte div waar alle images in stonden. 
 
-<img src="images/section_animatie_div" width="375px" alt="div waar de images van de section animatie in staan">
+<img src="images/section_animatie_div.png" width="375px" alt="div waar de images van de section animatie in staan">
 
 ### Screenshot(s)
 
