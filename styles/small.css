@@ -637,6 +637,7 @@ body main section:nth-child(11) {
 }
 
 /* de bolletjes container */
+
 .discographySlider nav ul,
 .videoSlider nav ul {
   position: absolute;
@@ -655,6 +656,7 @@ body main section:nth-child(11) {
 }
 
 /* de bolletjes wrapper */
+
 .discographySlider nav li,
 .videoSlider nav li {
   position: relative;
@@ -721,6 +723,7 @@ body main section:nth-child(11) {
 }
 
 /* initieel staan de links "buiten beeld" */
+
 .discographySlider > a[href="previous"],
 .videoSlider > a[href="previous"] {
   left: .5em;
@@ -738,6 +741,7 @@ body main section:nth-child(11) {
 }
 
 /* prev en next linkbuttons pijltjes */
+
 .discographySlider > a::before,
 .discographySlider > a::after,
 .videoSlider > a::before, 
