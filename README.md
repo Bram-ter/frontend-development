@@ -248,7 +248,7 @@ https://codepen.io/michellebarker/pen/XwQXGv
 
 Ik vond het fijne aan dit voorbeeld dat hij aparte functies had gemaakt voor het toevoegen en verwijderen van de class.
 
-<img src="images/IO_oud.png" width="375px" alt="oude code van de intersection observer">
+<img src="images/IO_oud.png" width="375px" alt="oude code van de intersection observer" style="vertical-align: top;">
 <img src="images/IO_nieuw.png" width="375px" alt="nieuwe code van de intersection observer">
 
 Ik heb me de laatste dag bezig gehouden met alles netjes maken. Ik heb bijvoorbeeld de section animaties toegevoegd. Dit had ik de dag ervoor ook geprobeerd met een ::before en ::after maar dat lukte mij helaas niet. Daarom had ik op de laatste dag ervoor gekozen om dit toch te doen met een aparte div waar alle images in stonden. 
