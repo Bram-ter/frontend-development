@@ -233,9 +233,9 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-De laatste week was voor mij nog wel een beetje aanpoten. Ik wilde nog best veel dingen van mijn website uitwerken. Ik heb bijvoorbeeld kleine animaties uitgewerkt voor de pijltjes van de sliders en de button in de video section waarmee je weer omhoog kon scrollen. Ik heb er ook voor gekozen om een apart css bestand te maken voor de keyframes en de code die bij de sections hoorde, zodat dit overzichtelijker is en toegankelijker om aan te passen.
+De laatste week was voor mij nog wel een beetje aanpoten. Ik wilde nog best veel dingen van mijn website uitwerken. Ik heb bijvoorbeeld kleine animaties uitgewerkt voor de pijltjes van de sliders, en voor de button in de video section waarmee je weer omhoog kon scrollen. Ik heb er ook voor gekozen om mijn code te verspreiden over meerdere css bestanden. Ik heb css bestanden gemaakt voor de meerdere formaten schermen en voor de section animaties.
 
-Links de keyframes van de arrow animaties, en rechts die van de section animaties.
+Links zijn de keyframes van de arrow animatie te zien, en rechts die van de section animaties.
 
 <img src="images/keyframes_van_de_arrow_animaties.png" width="375px" alt="keyframes van de arrow animaties">
 <img src="images/keyframes_van_de_section_animaties.png" width="375px" alt="keyframes van de section animaties">
@@ -262,7 +262,7 @@ Ik heb me de laatste dag bezig gehouden met alles netjes maken. Ik heb bijvoorbe
 
 <img src="images/section_animatie_div.png" width="375px" alt="div waar de images van de section animatie in staan">
 
-Er zijn een hele boel dingen die ik helaas nog niet uit heb kunnen werken omdat mijn website best groot was. 
+Er zijn een hele boel dingen die ik helaas nog niet uit heb kunnen werken omdat ik hier niet genoeg tijd voor over had. 
 
 - De modal popup die opkomt als je op de detail button drukt.
 - Op mobiel zorgen dat je in het hamburger menu blijft als je hem opent doormiddel van tabben.
@@ -271,7 +271,7 @@ Er zijn een hele boel dingen die ik helaas nog niet uit heb kunnen werken omdat 
 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+<img src="images/website_mobile.jpg" width="375px" alt="mijn website op mobiel">
 
 </details>
 
