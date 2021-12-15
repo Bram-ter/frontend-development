@@ -1,0 +1,619 @@
+/* CSS Document */
+:root {
+  --orange: #f25601;
+  --white: #fff;
+  --grey: #3c3c3c;
+  --yellow-background: rgba(255,227,40,0.9);
+  --hover-color: #8689a0;
+  --slider-item-bg: #fed046;
+  --slider-item-bg-mobile: #fff6db;
+  --slider-nav-item-bg: #757575;
+  --scrollbar-thumb-color: rgba(168,138,50,1.0);
+}
+
+/* Fonts */
+
+@font-face { 
+  font-family: "Posterama";
+  src: url("../fonts/posterama/Posterama_1927_Bold.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Noto-sans";
+  src: url("../fonts/Noto_Sans_JP/NotoSansJP-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "facetype-publica";
+  src: url("../fonts/facetype_publica/facetype_publica_slab_regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roboto-condensed";
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cdtype-locke";
+  src: url("../fonts/cdtype_locke/cdtype_locke_regular.otf") format("opentype");
+}
+
+@media (min-width: 60em) { 
+
+  /* Global */
+
+  body section header {
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  body main section div > h2,
+  body main section > h2 {
+    font-size: 4em;
+    letter-spacing: .1em;
+  }
+
+  /* Landing section */
+  
+  body main section:nth-child(1) header button {
+    display: none;
+  }
+  
+  body main section:nth-child(1) header nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: inherit;
+    background-color: transparent;
+    color: var(--white);
+    transition: .3s;
+  }
+  
+  body main section:nth-child(1) header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; 
+  }
+
+  body main section:nth-child(1) header nav.sticky {
+    position: sticky;
+  }
+
+  body main section:nth-child(1) header nav ul li {
+    width: auto;
+  }
+
+  body main section:nth-child(1) header nav ul li a {
+    font-size: 1em;
+  }
+  
+  body main section:nth-child(1) header nav ul li a:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+  }
+
+  body main section:nth-child(1) header nav h1 img {
+    width: 9.8em;
+    height: 2.7em;
+  }
+  
+  body main section:nth-child(1) header nav h1 {
+    width: 8em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  
+  body main section:nth-child(1) > img {
+    align-self: center;
+    width: 45em;
+  } 
+
+  body main section:nth-child(1) header nav ul li:nth-child(9),
+  body main section:nth-child(1) header nav ul li:nth-child(10),
+  body main section:nth-child(1) header nav ul li:nth-child(11) {
+    width: 2.5em;
+  }
+
+  body main section:nth-child(1) header nav ul li:nth-child(9) a img,
+  body main section:nth-child(1) header nav ul li:nth-child(10) a img,
+  body main section:nth-child(1) header nav ul li:nth-child(11) a img {
+    width: 2em;
+    border-radius: .2em;
+  }
+
+  /* News section */ 
+
+  body main section:nth-child(3) {
+    position: relative;
+    background-image: 
+      url('../images/assets/news_illust_1.png'),
+      url('../images/assets/news_illust_2.png'),
+      url('../images/assets/news_illust_3.png')
+    ;
+    background-repeat: no-repeat;
+    background-position: left top, left bottom, 77% 30%;
+    background-size: 10em, 10em, 10em;
+  }
+
+  body main section:nth-child(3) > ul {
+    font-size: 1.2em;
+  }
+
+  /* Profile section */ 
+
+  body main section:nth-child(9) {
+    justify-content: center;
+  }
+
+  body main section:nth-child(9) div article:nth-child(1) > a, 
+  body main section:nth-child(9) div article:nth-child(3) > a {
+    width: 20em;
+    height: 100%;
+    background-position-y: 1em;
+  }
+
+  body main section:nth-child(9) div article:nth-child(1) > a, 
+  body main section:nth-child(9) div article:nth-child(3) > a {
+    background-size: contain;
+  }
+
+  /* Video section */
+
+  body main section:nth-child(11) {
+    background-image: 
+      url('../images/assets/video_illust_1.png'),
+      url('../images/assets/video_illust_2.png'),
+      url('../images/assets/video_bg.jpeg')
+    ;
+    background-repeat: no-repeat;
+    background-position: left -2em, right -2em, center;
+    background-size: 25%, 25%, cover;
+    height: 100vh;
+  }
+
+  body main section:nth-child(11) > a:first-of-type {
+    position: absolute;
+    right: .5em;
+    bottom: .5em;
+    display: flex;
+    justify-content: center;
+    width: 10em;
+    height: 10em;
+  }
+
+  body main section:nth-child(11) > a img {
+    width: 7em;
+  }
+
+  body main section:nth-child(11) > a > img:first-of-type {
+    animation: Upanddown 1.5s ease-in-out infinite;
+  }
+
+  /* News slider */
+
+  .newsSlider {
+    width: 80%;
+  }
+
+  .newsSlider > nav {
+    display: block;
+  }
+  
+  .newsSlider > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 18em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    /* handmatig scrollen is mogelijk */
+    overflow: hidden;
+    
+    /* snappen als er gescrolled wordt - andere helft bij li */
+    scroll-snap-type: inline mandatory;
+    /* smooth als met js gescrolled wordt */
+    scroll-behavior: smooth;
+    /* scrollbar zoveel mogelijk verbergen */
+    -webkit-overflow-scrolling: touch; /* voor iOS*/
+    -ms-overflow-style: none; /* voor IE */
+    scrollbar-width: none; /* voor firefox */
+    
+    /* indien het einde of het begin van de pagina bereikt is met scrollen */
+    /* voorkomen dat de pagina gaat scrollen */
+    overscroll-behavior: contain auto;
+  }
+  
+  .newsSlider > div::-webkit-scrollbar {
+    /* scrollbar zoveel mogelijk verbergen */
+    display: none; /* voor chrome, safari en edge*/
+  }
+  
+  .newsSlider > div ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1ch;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    padding-left: 0;
+  }
+
+  .newsSlider > div ul li {
+    display: grid;
+    width: 25%;
+    height: 8em;
+    padding-left: .5em;
+    padding-right: .5em;
+    border-radius: .2em;
+  }
+
+  .newsSlider > div ul li:nth-child(even),
+  .newsSlider > div ul li:nth-child(odd) {
+    background-color: var(--slider-item-bg);
+  }
+  
+  .newsSlider > div ul li h3 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    background-color: var(--grey);
+    width: 100%;
+    margin-top: .5em;
+    padding: .5em;
+    color: var(--white);
+    font-size: 1em;
+    font-family: "facetype-publica";
+    text-transform: uppercase;
+    border-radius: .2em;
+    line-height: 1;
+  }
+  
+  .newsSlider > div ul li h4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: .7em;
+    margin-left: .5em;
+    font-family: "Roboto-condensed";
+    font-weight: bold;
+  }
+  
+  .newsSlider > div ul li a {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    width: 90%;
+    margin-top: .7em;
+  }
+  
+  /* de bolletjes container */
+
+  .newsSlider nav ul {
+    position: absolute;
+    left: 2em; right: 2em;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 0;
+    padding: .25em;
+    list-style: none;
+  }
+  
+  /* de bolletjes wrapper */
+
+  .newsSlider nav li {
+    position: relative;
+    display: flex;
+    margin: 1em;
+    padding: 0;
+  }
+  
+  .newsSlider > nav li::after {
+    position: absolute;
+    bottom: 50%; top: 50%; left: 50%;
+    content: '│';
+    transform: rotate(-90deg);
+  }
+  
+  .newsSlider > nav li:last-of-type::after {
+    content: '';
+  }
+  
+  /* de bolletjes */
+
+  .newsSlider > nav a {
+    display: block;
+    background-color: var(--slider-nav-item-bg);
+    width: .7em;
+    height: .7em;
+    color: currentColor;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  
+  .newsSlider > nav a:hover,
+  .newsSlider > nav a:focus {
+    color: var(--grey);
+  }
+  
+  .newsSlider > nav a.current {
+    background-color: currentColor;
+  }
+  
+  .newsSlider > a {
+    position: absolute;
+    top: calc(50% - 1.5em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em; 
+    height: 3em;
+    color: currentColor;
+    transition: 0.5s;
+  }
+  
+  /* initieel staan de links "buiten beeld" */
+  .newsSlider > a[href="previous"] {
+    left: 0em;
+  }
+  .newsSlider > a[href="next"] {
+    right: 0em;
+  }
+  
+  /* prev en next linkbuttons pijltjes */
+  .newsSlider > a::before,
+  .newsSlider > a::after {
+    content: "";
+    position: absolute;
+    background-color: currentColor;
+    width: 2em; 
+    height: 4px;
+  }
+  
+  .newsSlider > a[href=previous]::before {
+    transform-origin: 2px center;
+    transform: translateY(0) rotate(45deg);
+  }
+  .newsSlider > a[href=previous]::after {
+    transform-origin: 2px center;
+    transform: translateY(0) rotate(-45deg);
+  }
+  
+  .newsSlider > a[href=next]::before {
+    transform-origin: calc(100% - 2px) center;
+    transform: translateY(0) rotate(45deg);
+  }
+  .newsSlider > a[href=next]::after {
+    transform-origin: calc(100% - 2px) center;
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  /* Live slider */ 
+
+  .liveSlider {
+    position: relative; 
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .liveSlider > nav {
+    display: block;
+  }
+  
+  .liveSlider > div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 25em;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    
+    /* handmatig scrollen is mogelijk */
+    overflow: hidden;
+    
+    /* snappen als er gescrolled wordt - andere helft bij li */
+    scroll-snap-type: inline mandatory;
+    /* smooth als met js gescrolled wordt */
+    scroll-behavior: smooth;
+    /* scrollbar zoveel mogelijk verbergen */
+    -webkit-overflow-scrolling: touch; /* voor iOS*/
+    -ms-overflow-style: none; /* voor IE */
+    scrollbar-width: none; /* voor firefox */
+    
+    /* indien het einde of het begin van de pagina bereikt is met scrollen */
+    /* voorkomen dat de pagina gaat scrollen */
+    overscroll-behavior: contain auto;
+  }
+  
+  .liveSlider > div::-webkit-scrollbar {
+    /* scrollbar zoveel mogelijk verbergen */
+    display: none; /* voor chrome, safari en edge*/
+  }
+  
+  .liveSlider > div ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1ch;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    padding-left: 0;
+  }
+
+  .liveSlider > div ul li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .liveSlider > div ul li img {
+    width: 100%;
+    max-height: 9.5em;
+    border-radius: .2em;
+  }
+  
+  .liveSlider > div ul li h4 {
+    margin-top: .7em;
+    margin-bottom: .7em;
+    margin-left: .5em;
+    font-family: "Roboto-condensed";
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  
+  .liveSlider > div ul li p {
+    justify-self: center;
+    width: 90%;
+    margin-top: .7em;
+  }
+
+  .liveSlider > div ul li a {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .liveSlider > div ul li:nth-child(even),
+  .liveSlider > div ul li:nth-child(odd) {
+    background-color: transparent;
+  }
+  
+  /* de bolletjes container */
+
+  .liveSlider nav ul {
+    position: absolute;
+    left: 2em; 
+    right: 2em;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin: 0;
+    padding: .25em;
+    list-style: none;
+  }
+  
+  /* de bolletjes wrapper */
+
+  .liveSlider nav li {
+    position: relative;
+    display: flex;
+    margin: 1em;
+    padding: 0;
+  }
+  
+  .liveSlider > nav li::after {
+    content: '│';
+    position: absolute;
+    bottom: 50%;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-90deg);
+  }
+  
+  .liveSlider > nav li:last-of-type::after {
+    content: '';
+  }
+  
+  /* de bolletjes */
+
+  .liveSlider > nav a {
+    display: block;
+    background-color: var(--slider-nav-item-bg);
+    width: .7em;
+    height: .7em;
+    color: currentColor;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  
+  .liveSlider > nav a:hover,
+  .liveSlider > nav a:focus {
+    color: var(--grey);
+  }
+  
+  .liveSlider > nav a.current {
+    background-color: currentColor;
+  }
+  
+  .liveSlider > a {
+    position: absolute;
+    top: calc(50% - 1.5em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em; height: 3em;
+  
+    color: currentColor;
+    transition: 0.5s;
+  }
+  
+  /* initieel staan de links "buiten beeld" */
+  .liveSlider > a[href="previous"] {
+    left: 0em;
+  }
+  .liveSlider > a[href="next"] {
+    right: 0em;
+  }
+  
+  /* prev en next linkbuttons pijltjes */
+  .liveSlider > a::before,
+  .liveSlider > a::after {
+    content: "";
+    position: absolute;
+    background-color: currentColor;
+    width: 2em; 
+    height: 4px;
+  }
+  
+  .liveSlider > a[href=previous]::before {
+    transform-origin: 2px center;
+    transform: translateY(0) rotate(45deg);
+  }
+  .liveSlider > a[href=previous]::after {
+    transform-origin: 2px center;
+    transform: translateY(0) rotate(-45deg);
+  }
+  
+  .liveSlider > a[href=next]::before {
+    transform-origin: calc(100% - 2px) center;
+    transform: translateY(0) rotate(45deg);
+  }
+  .liveSlider > a[href=next]::after {
+    transform-origin: calc(100% - 2px) center;
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  /* Discography slider */
+
+  .discographySlider {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .discographySlider > div {
+    width: 100%;
+    height: 32em;
+  }
+
+  .discographySlider > div ul li img {
+    width: 20em;
+  }
+
+  .discographySlider > a[href="previous"] {
+    left: calc(50% - 20em);
+  }
+
+  .discographySlider > a[href="next"] {
+    right: calc(50% - 20em);
+  }
+}
+

@@ -12,8 +12,6 @@ function mobileMenu() {
 
 hamburger.addEventListener("click", mobileMenu);
 
-
-
 /* -- Slider -- */
 
 function createCarrousel(carrouselID) {
@@ -25,8 +23,8 @@ function createCarrousel(carrouselID) {
 	
   
   /****************/
-	/* DE BOLLETJES */
-	/****************/
+  /* DE BOLLETJES */
+  /****************/
   
   // de bolletjes activeren
   function iniBolletjes() {
@@ -46,12 +44,11 @@ function createCarrousel(carrouselID) {
     }
 	}
   
-  
   /*****************************/
-	/* LINKS/RECHTS LINK-BUTTONS */
-	/*****************************/  
+  /* LINKS/RECHTS LINK-BUTTONS */
+  /*****************************/  
 
-	// de links/rechts link-buttons initialiseren en activeren
+  // de links/rechts link-buttons initialiseren en activeren
   function iniLinkButtons() {    
     for(linkButton of linkButtons) {
 			// beide link-buttins naar kliks laten luisteren
@@ -70,10 +67,10 @@ function createCarrousel(carrouselID) {
   
   
   /*****************/
-	/* START POSITIE */
-	/*****************/
+  /* START POSITIE */
+  /*****************/
   
-	// het eerste element en bolletje actief maaken
+  // het eerste element en bolletje actief maaken
   function iniStartPosition() {
     // eerste element current maken
     carrouselElements[0].classList.add("current");
@@ -85,8 +82,8 @@ function createCarrousel(carrouselID) {
   
   
   /*********************/
-	/* ALGEMENE FUNCTIES */
-	/*********************/
+  /* ALGEMENE FUNCTIES */
+  /*********************/
   
   //////////////////////////////////
   // naar volgende/vorige element //
@@ -133,18 +130,18 @@ function createCarrousel(carrouselID) {
   
   
   ////////////////////////////
-	// update current element //
-	function updateCurrentElement(elementID) {
-		// het huidige current element opzoeken
-		let currentElement = carrousel.querySelector(":scope > div > .current");
-		// de class current verwijderen
-		currentElement.classList.remove("current");
+  // update current element //
+  function updateCurrentElement(elementID) {
+	// het huidige current element opzoeken
+	let currentElement = carrousel.querySelector(":scope > div > .current");
+	// de class current verwijderen
+	currentElement.classList.remove("current");
 
-		// het nieuwe element opzoeken
-		let newElement = carrousel.querySelector("#"+elementID);
-		// de class current toevoegen
-		newElement.classList.add("current");
-	}
+	// het nieuwe element opzoeken
+	let newElement = carrousel.querySelector("#"+elementID);
+	// de class current toevoegen
+	newElement.classList.add("current");
+  }
 
   
   //////////////////////
@@ -156,10 +153,10 @@ function createCarrousel(carrouselID) {
 		currentBolletje.classList.remove("current");
 		
 		// het nieuwe bolletje opzoeken
-    let newBolletje = carrousel.querySelector("a[href='#"+elementID+"']");
+    	let newBolletje = carrousel.querySelector("a[href='#"+elementID+"']");
 		// de class current toevoegen
 		newBolletje.classList.add("current");
-  }
+   }
 
   
   
@@ -185,5 +182,4 @@ function createCarrousel(carrouselID) {
   createCarrousel("videoSlider");
   //je kunt hier ook meerdere carrousellen activeren
 })();
-
 

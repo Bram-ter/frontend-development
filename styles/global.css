@@ -1,0 +1,116 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+html, main {
+  scroll-behavior: smooth;
+}
+
+body,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --button-color: #f25601;
+  --text-color: #fff;
+  --subheading-color: #3c3c3c;
+  --yellow-background: rgba(255,227,40,0.9);
+  --hover-color: #8689a0;
+  --slider-item-bg: #fed046;
+  --slider-item-bg-mobile: #fff6db;
+  --slider-nav-item-bg: #757575;
+  --scrollbar-thumb-color: rgba(168,138,50,1.0);
+}
+
+/* Fonts */
+
+@font-face { 
+  font-family: "Posterama";
+  src: url("../fonts/posterama/Posterama_1927_Bold.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Noto-sans";
+  src: url("../fonts/Noto_Sans_JP/NotoSansJP-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "facetype-publica";
+  src: url("../fonts/facetype_publica/facetype_publica_slab_regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roboto-condensed";
+  src: url("../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cdtype-locke";
+  src: url("../fonts/cdtype_locke/cdtype_locke_regular.otf") format("opentype");
+}
+
+/* Reusable Classes */
+
+.active {
+  display: block !important; 
+}
+
+.none {
+  display: none !important;
+}
+
+.cross {
+  background-image: url(../images/assets/btn_nav_on.png) !important;
+}
+
+/* Global */
+
+body main {
+  position: relative;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+body main > img {
+  width: 100%;
+  display: block;
+}
+
+body main section {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-size: 8em, 8em;
+}
+
+body main section div > h2,h3,
+body main section > h2,h3 {
+  font-family: "Posterama";
+  color: var(--subheading-color);
+  font-weight: 300;
+  text-align: center;
+}
+
+body main section div > h2,
+body main section > h2 {
+  font-size: 2em;
+  letter-spacing: .1em;
+}
+
+body main section div > h3,
+body main section > h3 {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+body main section div > h3::before,
+body main section div > h3::after,
+body main section > h3::before,
+body main section > h3::after {
+  font-family: "Noto-sans";
+  content: ' ╌ ';
+  font-weight: 600;
+}

@@ -262,6 +262,13 @@ Ik heb me de laatste dag bezig gehouden met alles netjes maken. Ik heb bijvoorbe
 
 <img src="images/section_animatie_div.png" width="375px" alt="div waar de images van de section animatie in staan">
 
+Er zijn een hele boel dingen die ik helaas nog niet uit heb kunnen werken omdat mijn website best groot was. 
+
+- De modal popup die opkomt als je op de detail button drukt.
+- Op mobiel zorgen dat je in het hamburger menu blijft als je hem opent doormiddel van tabben.
+- Nav menu met dots aan de zijkant dat verandert op basis van welke section je zit. 
+- Sticky menu dat met je mee scrollt.
+
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
