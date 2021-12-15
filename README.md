@@ -233,9 +233,12 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-De laatste week was voor mij nog wel een beetje aanpoten. Ik wilde nog best veel dingen van mijn website uitwerken. Ik heb bijvoorbeeld kleine animaties uitgewerkt voor de pijltjes van de sliders en de button in de video section waarmee je weer omhoog kon scrollen.
+De laatste week was voor mij nog wel een beetje aanpoten. Ik wilde nog best veel dingen van mijn website uitwerken. Ik heb bijvoorbeeld kleine animaties uitgewerkt voor de pijltjes van de sliders en de button in de video section waarmee je weer omhoog kon scrollen. Ik heb er ook voor gekozen om een apart css bestand te maken voor de keyframes en de code die bij de sections hoorde, zodat dit overzichtelijker is en toegankelijker om aan te passen.
 
-<img src="images/keyframes_van_de_animaties.png" width="375px" alt="keyframes van de animaties">
+Links de keyframes van de arrow animaties, en rechts die van de section animaties.
+
+<img src="images/keyframes_van_de_arrow_animaties.png" width="375px" alt="keyframes van de arrow animaties">
+<img src="images/keyframes_van_de_section_animaties.png" width="375px" alt="keyframes van de section animaties">
 
 Ook heb ik geprobeerd om meerdere sliders in de website te zetten. Dit ging een beetje moeizaam omdat ik het moeilijk vond om de code van Sanne aan te passen. Dit was niet omdat Sanne warrige code schreef, maar omdat ik zelf nog niet heel goed ben in JavaScript :)
 
@@ -246,15 +249,24 @@ Ik heb uiteindelijk Deanna om hulp gevraagd omdat ik er zelf niet uitkwam. Nadat
 <img src="images/nav_voor.png" width="375px" alt="nav voor mijn aanpassing">
 <img src="images/nav_na.png" width="375px" alt="na na mijn aanpassing">
 
+Ik heb ook mijn intersection observer bijgewerkt zodat hij het weer zou doen. De code die ik al gebruikte was nog niet goed geoptimaliseerd voor het gebruik van scroll-snap daarom ben ik gaan zoeken naar een ander voorbeeld die wel werkte.
+
+https://codepen.io/michellebarker/pen/XwQXGv
+
+Ik vond het fijne aan dit voorbeeld dat hij aparte functies had gemaakt voor het toevoegen en verwijderen van de class.
+
+<img src="images/IO_oud.png" width="375px" alt="oude code van de intersection observer">
+<img src="images/IO_nieuw.png" width="375px" alt="nieuwe code van de intersection observer">
+
+Ik heb me de laatste dag bezig gehouden met alles netjes maken. Ik heb bijvoorbeeld de section animaties toegevoegd. Dit had ik de dag ervoor ook geprobeerd met een ::before en ::after maar dat lukte mij helaas niet. Daarom had ik op de laatste dag ervoor gekozen om dit toch te doen met een aparte div waar alle images in stonden. 
+
+<img src="images/section_animatie_div" width="375px" alt="div waar de images van de section animatie in staan">
+
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
 
 </details>
-
-
-
-
 
 ## Bronnenlijst
 

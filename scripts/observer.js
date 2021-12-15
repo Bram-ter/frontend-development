@@ -19,7 +19,7 @@ const removeClass = (el) => {
 	}
 }
 
-const doThings = (entries, observer) => {
+const checkIntersecting = (entries, observer) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			addClass(entry.target)
@@ -29,8 +29,9 @@ const doThings = (entries, observer) => {
   })
 }
 
-const observer = new IntersectionObserver(doThings, options)
+const observer = new IntersectionObserver(checkIntersecting, options)
 
 targets.forEach(target => {
 	observer.observe(target)
 })
+
