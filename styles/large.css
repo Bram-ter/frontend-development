@@ -453,7 +453,7 @@
   
   .liveSlider > div ul li img {
     width: 100%;
-    max-height: 9.5em;
+    height: 50%;
     border-radius: .2em;
   }
   
